@@ -1,0 +1,41 @@
+/* خلفية موحدة وناعمة مع ظل وحواف دائرية */
+.parent-sector-wrapper {
+	background: linear-gradient(135deg, #F5F5F5 0%, #FFFFFF 100%);
+	border-radius: 24px;
+	box-shadow: 0 8px 32px 0 rgba(183, 28, 28, 0.10);
+	padding: 2rem 2rem 0rem 2rem;
+	margin: 2rem auto;
+	max-width: 1200px;
+    direction: ltr;
+}
+
+.parent-sector-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	align-items: stretch;
+}
+
+/* Ensure the direct children of the grid fill height and use flex column layout */
+.parent-sector-grid > * {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.parent-sector-stats {
+	margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+	.parent-sector-grid {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+	.parent-sector-wrapper {
+		padding: 1.2rem 0.5rem;
+	}
+	.parent-sector-stats {
+		/* margin-top: 1.2rem; */
+	}
+}

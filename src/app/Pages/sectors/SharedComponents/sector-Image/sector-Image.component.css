@@ -1,0 +1,36 @@
+
+/* المحتوى البصري */
+.visual-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: rotate(-2deg);
+}
+
+.main-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* التجاوب */
+@media (max-width: 768px) {
+  
+
+  .visual-content {
+    order: 1;
+  }
+
+ 
+}
