@@ -1,5 +1,5 @@
 /* ===============================
-   🎨 Services Component - Updated to Match Image Design
+   🎨 Services Grid Component - Clean Design
    =============================== */
 :root {
   /* Primary Luxor Medical Colors */
@@ -54,44 +54,6 @@
   --services-section-padding: 80px 0;
   --services-card-margin: 30px;
 }
-
-/* ===============================
-   🏥 Services Section Container
-   =============================== */
-.services-section {
-  padding: var(--services-section-padding);
-  background: var(--services-bg);
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* ===============================
-   📋 Section Title
-   =============================== */
-.section-title {
-  padding-bottom: 80px;
-  text-align: center;
-}
-
-.section-title h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  text-align: center;
-  color: var(--services-text);
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.title-underline {
-  background-position: center center;
-  background-size: cover;
-  width: 120px;
-  height: 21px;
-  margin: 20px auto 0;
-}
-
 /* ===============================
    🎴 Services Grid
    =============================== */
@@ -121,7 +83,7 @@
    🎯 Service Card - Updated Design
    =============================== */
 .service-card {
-  border: 1px solid var(--services-card-border);
+  border: 1px solid #E0E0E0;
   position: relative;
   background: var(--services-card-bg);
   transition: all 0.3s ease;
@@ -133,6 +95,8 @@
   box-shadow: var(--services-card-shadow);
   text-align: center;
   padding: 0; /* Remove padding to let header take full width */
+   /* Force border color to primary red */
+
 }
 
 .service-card:hover {
@@ -177,49 +141,39 @@
   filter: brightness(0) invert(1); /* Makes icons white */
   transition: transform 0.3s ease;
 }
-
 .service-card:hover .icon-image {
   transform: scale(1.1);
 }
 
-/* ===============================
-   📝 Title Section (Right Side - Dark Background)
-   =============================== */
+.type-text {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 600;
+  color: var(--medicine-light-beige);
+}
+
 .card-title-section {
   flex: 1; /* Takes remaining space */
   background: var(--medicine-primary-brown);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 50px;
+  padding: 0 20px;
   transition: all 0.3s ease;
 }
+
 .card-title {
-    font-size: 16px;
-  line-height: 1.4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
   font-weight: 600;
   color: var(--medicine-white);
-  
-}
-  
-
-.service-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--medicine-primary-brown-light);
   margin: 0;
   line-height: 1.3;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   text-align: left;
 }
-.type-text{
-    font-size: 16px;
-  line-height: 1.6;
-  font-weight: 600;
-  color: var(--medicine-light-beige);
-}
+
 /* ===============================
    📝 Card Content - Simplified
    =============================== */
@@ -232,54 +186,35 @@
   text-align: center;
 }
 
+.service-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--services-title-color);
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center; /* Center the title */
+}
+
 .card-description {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   line-height: 1.6;
   color: var(--services-description-color);
-  margin: 0 0 20px 0;
+  margin: 0;
   flex: 1;
   text-align: center;
 }
 
 
-/* ===============================
-   🔗 All Services Button
-   =============================== */
-.all-services-section {
-  text-align: center;
-  margin-top: 50px;
-}
 
-.all-services-btn {
-  display: inline-block;
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--services-all-btn-color);
-  text-decoration: none;
-  padding: 12px 30px;
-  border: 2px solid var(--services-all-btn-color);
-  border-radius: 25px;
-  transition: all 0.3s ease;
-}
-
-.all-services-btn:hover {
-  background: var(--services-all-btn-color);
-  color: var(--medicine-white);
-  text-decoration: none;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(183, 28, 28, 0.3);
-}
 
 /* ===============================
    📱 Responsive Design
    =============================== */
 @media (max-width: 1024px) {
-  .services-section {
-    padding: 80px 20px;
-  }
-
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -310,22 +245,13 @@
   .card-title {
     font-size: 14px;
   }
+
+  .service-title {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 768px) {
-  .services-section {
-    padding: 60px 15px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .section-title {
-    padding-bottom: 60px;
-  }
-
-  .section-title h2 {
-    font-size: 28px;
-  }
-
   .services-grid {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -357,25 +283,16 @@
     font-size: 13px;
   }
 
+  .service-title {
+    font-size: 15px;
+  }
+
   .card-description {
     font-size: 13px;
   }
 }
 
 @media (max-width: 576px) {
-  .services-section {
-    padding: 40px 10px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .section-title {
-    padding-bottom: 40px;
-  }
-
-  .section-title h2 {
-    font-size: 24px;
-  }
-
   .services-grid {
     padding: 0 5px;
   }
@@ -416,13 +333,12 @@
     text-align: center;
   }
 
-  .card-description {
-    font-size: 12px;
+  .service-title {
+    font-size: 14px;
   }
 
-  .all-services-btn {
-    font-size: 14px;
-    padding: 10px 20px;
+  .card-description {
+    font-size: 12px;
   }
 }
 
@@ -430,11 +346,6 @@
    ♿ Accessibility & Focus States
    =============================== */
 .service-card:focus {
-  outline: 2px solid var(--medicine-medical-blue);
-  outline-offset: 2px;
-}
-
-.all-services-btn:focus {
   outline: 2px solid var(--medicine-primary-red);
   outline-offset: 2px;
 }
@@ -470,4 +381,66 @@
    =============================== */
 [dir="rtl"] .card-content {
   text-align: center;
+}
+
+/* ===============================
+   🔢 Pagination Styles
+   =============================== */
+.news-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin: 30px auto 0 auto;
+  padding: 0;
+  list-style: none;
+  width: fit-content;
+  /* margin-left: 100px; */
+}
+
+.news-pagination-btn {
+  background: var(--medicine-white, #fff);
+  color: var(--medicine-primary-brown, #5d4037);
+  border: 2px solid var(--medicine-primary-brown, #5d4037);
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(93, 64, 55, 0.08);
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-pagination-btn.active {
+  background: var(--medicine-primary-red, #b71c1c);
+  color: var(--medicine-white, #fff);
+  border-color: var(--medicine-primary-red, #b71c1c);
+  box-shadow: 0 4px 16px rgba(183, 28, 28, 0.12);
+}
+
+.news-pagination-btn.nav-btn {
+  font-size: 0.95rem;
+  padding: 8px 16px;
+}
+
+.news-pagination-btn.nav-btn:disabled {
+  background: var(--medicine-medium-gray, #e9ecef);
+  color: var(--medicine-dark-gray, #424242);
+  border: none;
+}
+
+.news-pagination-btn.nav-btn:not(:disabled):hover {
+  background: var(--medicine-primary-brown-light, #6d4c41);
+  color: var(--medicine-white, #fff);
+}
+
+.news-pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

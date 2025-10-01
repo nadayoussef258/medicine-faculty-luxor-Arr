@@ -2,11 +2,11 @@
   <aside class="sidebar">
     <nav>
       <ul>
-        <li [class.active]="activeTab === 'about'" (click)="setActiveTab('about')">عن القطاع</li>
-        <li [class.active]="activeTab === 'director'" (click)="setActiveTab('director')">كلمة المدير</li>
-        <li [class.active]="activeTab === 'vision'" (click)="setActiveTab('vision')">الرؤية</li>
-        <li [class.active]="activeTab === 'mission'" (click)="setActiveTab('mission')">الرسالة</li>
-        <li [class.active]="activeTab === 'goals'" (click)="setActiveTab('goals')">الأهداف</li>
+        <li [class.active]="activeTab === 'about'" (click)="setActiveTab('about')">About the Sector</li>
+        <li [class.active]="activeTab === 'director'" (click)="setActiveTab('director')">Director's Message</li>
+        <li [class.active]="activeTab === 'vision'" (click)="setActiveTab('vision')">Vision</li>
+        <li [class.active]="activeTab === 'mission'" (click)="setActiveTab('mission')">Mission</li>
+        <li [class.active]="activeTab === 'goals'" (click)="setActiveTab('goals')">Goals</li>
       </ul>
     </nav>
   </aside>
@@ -21,7 +21,7 @@
 
     <app-sector-statistics
       *ngIf="activeTab === 'about' && sector.Statistics && sector.Statistics.length > 0"
-      [statistics]="sector.Statistics">
+      [stats]="sector.Statistics">
     </app-sector-statistics>
 
     <app-director-message

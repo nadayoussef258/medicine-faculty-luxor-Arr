@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 export interface FooterContactInfo {
   logoPath: string;
@@ -39,7 +40,7 @@ export interface FooterCopyright {
 @Component({
   selector: 'ck-medicine-footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './medicine-footer.component.html',
   styleUrls: ['./medicine-footer.component.css']
 })
@@ -47,36 +48,38 @@ export class MedicineFooterComponent {
   @Input() contactInfo: FooterContactInfo = {
     logoPath: 'assets/logo.png',
     logoAlt: 'MEDICARE',
-    description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fame ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.',
-    address: "45 Queen's Park Rd, Brighton, UK",
+    description: 'Faculty of Medicine – Luxor University: Shaping future doctors with knowledge, compassion, and innovation.',
+    address: "Luxor - New Tiba City - next to the city hall",
     phone: '(094) 123 4567 - (094) 123 4568',
-    email: 'medicareplus@domain.com'
+    email: 'www.luxor.edu.eg'
   };
 
   @Input() quickLinks: FooterQuickLink[] = [
-    { text: 'Home', url: '#', icon: '+' },
-    { text: 'About', url: '#', icon: '+' },
-    { text: 'Services', url: '#', icon: '+' },
-    { text: 'Timetable', url: '#', icon: '+' },
-    { text: 'Blog', url: '#', icon: '+' },
-    { text: 'Contact', url: '#', icon: '+' }
+    { text: 'Home', url: '/', icon: '+' },
+    // { text: 'About the College', url: '/about-college', icon: '+' },
+    // { text: 'Sectors', url: '/sector', icon: '+' },
+    // { text: 'Scientific Departments', url: '/departments', icon: '+' },
+    { text: 'Centers and Units', url: '/centers-units', icon: '+' },
+    { text: 'College Journal', url: '/journal', icon: '+' },
+    { text: 'Staff Members', url: '/staff-members', icon: '+' },
+    { text: 'News', url: '/news', icon: '+' }
   ];
 
   @Input() latestPosts: FooterPost[] = [
     {
-      title: 'Lorem ipsum dolor sit amet, consectetuer',
-      url: '#',
-      date: 'june 12, 2017'
+      title: 'Opening of the Center of Excellence in Scientific Research',
+      url: '/news/detail/1',
+      date: '2024-08-13'
     },
     {
-      title: 'Aliquam tincidunt mauris eu risus amet',
-      url: '#',
-      date: 'june 12, 2017'
+      title: 'Signing of Cooperation Agreement with a German University',
+      url: '/news/detail/2',
+      date: '2024-08-10'
     },
     {
-      title: 'Morbi in sem quis dui placerat ornare column',
-      url: '#',
-      date: 'june 12, 2017'
+      title: 'Launch of Master’s Program in Artificial Intelligence',
+      url: '/news/detail/3',
+      date: '2024-08-08'
     }
   ];
 

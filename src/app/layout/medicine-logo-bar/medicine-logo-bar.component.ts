@@ -16,6 +16,8 @@ export interface ContactDto{
   address?: string;
   phone?: string;
   email?: string;
+  website?: string;
+  facebook?: string;
 }
 
 @Component({
@@ -36,19 +38,17 @@ export class MedicineLogoBarComponent {
 
 
   @Input() contactInfo: ContactDto = {
-    address: '525 W Slauson Ave, LA, CA 90056, USA',
+    address: 'Luxor - New Tiba City - next to the city hall',
     phone: '(555) 555-1234',
     email: 'info@medicare.com',
+    website: 'http://www.luxor.edu.eg',
+    facebook: 'https://www.facebook.com/كلية الطب جامعة-الاقصر/112526971198533/',
   };
 
   constructor(private router: Router) { }
 
   openLocation(): void {
-    this.router.navigate(['/']);
-    // if (this.contactInfo.address) {
-    //   // This would typically open a map service
-    //   window.open(`https://maps.google.com/?q=${encodeURIComponent(this.contactInfo.address)}`, '_blank');
-    // }
+    window.open('https://maps.app.goo.gl/BMJvNXCY6eSSU7JA7', '_blank');
   }
 
   openPhone(phone: string): void {

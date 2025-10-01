@@ -127,6 +127,32 @@ export class StaffGridComponent {
       personalPage: 'https://luxor.edu.eg/staff/layla-ahmed',
       cvLink: 'https://luxor.edu.eg/cv/layla-ahmed.pdf',
       profileImage: 'assets/event3.jpg'
+    },
+    {
+      id: 7,
+      name: 'Dr. Layla Ahmed Mahmoud',
+      academicRank: 'Lecturer',
+      college: 'Faculty of Medicine',
+      department: 'Pathology Department',
+      email: 'layla.ahmed@medicine.luxor.edu.eg',
+      phone: '+20 123 456 7895',
+      researchInterests: 'Pathology, Histopathology, Molecular Pathology',
+      personalPage: 'https://luxor.edu.eg/staff/layla-ahmed',
+      cvLink: 'https://luxor.edu.eg/cv/layla-ahmed.pdf',
+      profileImage: 'assets/event3.jpg'
+    },
+    {
+      id: 8,
+      name: 'Dr. Layla Ahmed Mahmoud',
+      academicRank: 'Lecturer',
+      college: 'Faculty of Medicine',
+      department: 'Pathology Department',
+      email: 'layla.ahmed@medicine.luxor.edu.eg',
+      phone: '+20 123 456 7895',
+      researchInterests: 'Pathology, Histopathology, Molecular Pathology',
+      personalPage: 'https://luxor.edu.eg/staff/layla-ahmed',
+      cvLink: 'https://luxor.edu.eg/cv/layla-ahmed.pdf',
+      profileImage: 'assets/event3.jpg'
     }
   ];
 }

@@ -15,6 +15,7 @@ import { CollegeJournalComponent } from './Pages/College-Journal/college-journal
 import { NewsComponent } from './Pages/News/news.component';
 import { NewsDetailComponent } from './Pages/News/news-detail/news-detail.component';
 import { StaffMembersComponent } from './Pages/StaffMembers/staff-members.component';
+import { ServicesComponent } from './Pages/Services/services.component';
 import { SectorPageComponent } from './Pages/sectors/Sector-Page/Sector-Page.component';
 import { ParentAboutSectorComponent } from './Pages/sectors/SharedComponents/parent-about-sector/parent-about-sector.component';
 import { SectorDepartmentsComponent } from './Pages/sectors/SharedComponents/sector-departments/sector-departments.component';
@@ -75,6 +76,7 @@ export const routes: Routes = [
         { path: 'centers-units', component: CentersUnitsComponent },
         { path: 'journal', component: CollegeJournalComponent },
         { path: 'staff-members', component: StaffMembersComponent },
+        { path: 'services', component: ServicesComponent },
         {
           path: 'news',
           children: [

@@ -40,7 +40,7 @@
                   <div class="uni-quick-link">
                     <ul>
                       <li *ngFor="let link of quickLinks; trackBy: trackByFn">
-                        <a href="#" [attr.href]="link.url" (click)="onLinkClick('quicklink', link)">
+                        <a [routerLink]="link.url" (click)="onLinkClick('quicklink', link)">
                           <span>{{ link.icon }}</span> {{ link.text }}
                         </a>
                       </li>
@@ -59,7 +59,7 @@
                     <ul>
                       <li *ngFor="let post of latestPosts; trackBy: trackByFn">
                         <h4>
-                          <a href="#" [attr.href]="post.url" (click)="onLinkClick('post', post)">
+                          <a [routerLink]="post.url" (click)="onLinkClick('post', post)">
                             {{ post.title }}
                           </a>
                         </h4>

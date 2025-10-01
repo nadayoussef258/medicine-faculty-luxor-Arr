@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { SectorHeaderComponent } from '../sector-header/sector-header.component';
-import { DirectorMessageComponent } from '../director-message/director-message.component';
 import { VisionMissionGoalsComponent } from '../vision-mission-goals/vision-mission-goals.component';
 import { Sector } from '../../../../Models/sectors';
 import { SectorService } from '../../../../services/sector.service';
-import { SectorStatisticsComponent } from '../sector-statistics/sector-statistics.component';
+import { SectorStatisticsComponent } from '../statistics/statistics.component';
+import { DirectorMessageComponent } from '../director-message/director-message.component';
 
 @Component({
   selector: 'app-sector-page',

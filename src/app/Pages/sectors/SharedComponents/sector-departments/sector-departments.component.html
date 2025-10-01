@@ -1,12 +1,5 @@
 <div class="departments-container">
-  <!-- Header Section -->
-  <!-- <div class="departments-header">
-    <h2 class="section-title">
-      <i class="pi pi-building" style="margin-left: 8px;"></i>
-      الإدارات
-    </h2>
-    <p class="section-description">عرض جميع الإدارات التابعة للقطاع</p>
-  </div> -->
+  
 
   <!-- Loading State -->
   <div *ngIf="loading" class="loading-container">
@@ -94,14 +87,13 @@
   </div>
 
   <!-- Details Dialog -->
-  <p-dialog 
-    [(visible)]="displayDetails" 
-    [modal]="true" 
-    [style]="{width: '500px'}" 
+  <p-dialog
+    [(visible)]="displayDetails"
+    [modal]="true"
+    [style]="{width: '500px'}"
       [contentStyle]="{'background':'#fff', 'padding':'10px'}"
 
     header="تفاصيل الإدارة"
-    [rtl]="true"
     [closable]="true"
     (onHide)="hideDetails()">
     

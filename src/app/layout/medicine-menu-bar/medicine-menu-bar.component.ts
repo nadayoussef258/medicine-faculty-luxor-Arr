@@ -117,7 +117,11 @@ export class MedicineMenuBarComponent {
       title: 'Centers and Units',
       target: '/centers-units',
       order: 5,
-      menuTypeId: 'main'
+      menuTypeId: 'main',
+      childs: [
+        { title: 'Centers', target: '/centers', order: 1, menuTypeId: 'sub' },
+        { title: 'Units', target: '/units', order: 2, menuTypeId: 'sub' }
+      ]
     },
     {
       id: '6',
