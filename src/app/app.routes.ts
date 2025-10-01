@@ -21,6 +21,11 @@ import { SectorDepartmentsComponent } from './Pages/sectors/SharedComponents/sec
 import { SectorNewsComponent } from './Pages/sectors/SharedComponents/News/news.component';
 import { SectorNewsDetailComponent } from './Pages/sectors/SharedComponents/News/news-detail/news-detail.component';
 import { SectorServicesComponent } from './Pages/sectors/SharedComponents/sector-services/sector-services.component';
+import { MedicalDeanSpeechComponent } from './Pages/Home/dean-speech/dean-speech.component';
+import { VisionMissionComponent } from './Pages/About-College/vision-mission.component';
+import { HistoryComponent } from './Pages/About-College/overview/history.component';
+import { GoalsComponent } from './Pages/goals/goals.component';
+import { OrganizationalStructureComponent } from './Pages/About-College/management/OrganizationalStructure/OrganizationalStructure.component';
 
 export const routes: Routes = [
     {
@@ -28,12 +33,21 @@ export const routes: Routes = [
       component: LayoutComponent,
       children: [
         { path: '', component: HomeComponent },
+        {path:'dean-word', component:MedicalDeanSpeechComponent},
+        {path:'vision-mission', component:VisionMissionComponent},
+        {path:'history', component:HistoryComponent},
+        {path:'objectives', component:GoalsComponent},
+        {path:'structure', component:OrganizationalStructureComponent},
+
+
+
+
         {
           path: 'about-college',
           component: AboutCollegeComponent,
           children: [
-            { path: 'overview', component: OverviewComponent },
-            { path: 'management', component: ManagementComponent },
+            // { path: 'overview', component: OverviewComponent },
+            // { path: 'management', component: ManagementComponent },
             // Add other child routes here for objectives, structure, vision-mission, etc.
           ]
         },

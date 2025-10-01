@@ -1,0 +1,135 @@
+.director-section {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--medicine-primary-brown);
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--medicine-primary-red), var(--medicine-primary-orange));
+  border-radius: 2px;
+}
+
+.director-card {
+  background: var(--medicine-card-bg);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.director-image-wrapper {
+  position: relative;
+}
+
+.director-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: var(--shadow-sm);
+}
+
+.director-badge {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--medicine-primary-red), var(--medicine-primary-orange));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(183, 28, 28, 0.4);
+}
+
+.badge-icon {
+  font-size: 1.8rem;
+}
+
+.director-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.director-info {
+  border-right: 4px solid var(--medicine-primary-red);
+  padding-right: 20px;
+}
+
+.director-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--medicine-primary-brown);
+  margin-bottom: 8px;
+}
+
+.director-title {
+  font-size: 1.1rem;
+  color: var(--medicine-primary-red);
+  font-weight: 600;
+}
+
+.director-message {
+  position: relative;
+  padding: 25px;
+  background: linear-gradient(135deg, var(--medicine-light-gray), var(--medicine-medium-gray));
+  border-radius: 15px;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  font-size: 4rem;
+  color: var(--medicine-primary-red);
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+
+.message-text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--medicine-text-dark);
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .director-card {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+
+  .director-image {
+    height: 300px;
+  }
+
+  .director-info {
+    border-right: none;
+    border-top: 4px solid var(--medicine-primary-red);
+    padding-right: 0;
+    padding-top: 15px;
+  }
+}

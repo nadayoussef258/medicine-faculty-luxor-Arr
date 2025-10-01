@@ -5,7 +5,7 @@ import { Statistic } from '../../../../Models/sectors';
 
 
 @Component({
-  selector: 'app-sector-statistics',
+  // selector: 'app-sector-statistics',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './statistics.component.html',

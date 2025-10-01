@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { delay, Observable, of } from 'rxjs';
-import { AboutSector, AddSectorAttachmentDto, AddSectorDetailDto, AddSectorDto, AddSectorStatDto, Department, EditSectorAttachmentDto, EditSectorDetailDto, EditSectorStatDto, NavTab, News, SectorBasicInfo, SectorDto, SectorImage, SectorServices, Statistic } from '../Models/sectors';
+import { AboutSector, AddSectorAttachmentDto, AddSectorDetailDto, AddSectorDto, AddSectorStatDto, Department, EditSectorAttachmentDto, EditSectorDetailDto, EditSectorStatDto, NavTab, News, Sector, SectorBasicInfo, SectorDirector, SectorDto, SectorGoal, SectorImage, SectorMission, SectorServices, SectorVision, Statistic } from '../Models/sectors';
+import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class SectorService {
+private apiUrl = 'api/sectors'; // استبدل بـ API الفعلي
 
+  constructor(private http: HttpClient) {}
   // MOCK DATA ONLY - remove all HttpClient and API_ENDPOINTS usage
 
   // Sectors
@@ -301,5 +304,95 @@ getSectorNews(sectorId: string): Observable<News[]> {
   // getSectors(): Observable<AddSectorDto[]> {
   //   return of(this.sectors).pipe(delay(500));
   // }
+
+
+  getSectorById(sectorId: string): Observable<Sector> {
+    // return this.http.get<Sector>(`${this.apiUrl}/${sectorId}`);
+    
+    // Mock data للتجربة
+    return of(this.getMockSector(sectorId));
+  }
+
+  getAboutSector(sectorId: string): Observable<AboutSector> {
+    return this.http.get<AboutSector>(`${this.apiUrl}/${sectorId}/about`);
+  }
+
+  getSectorImages(sectorId: string): Observable<SectorImage[]> {
+    return this.http.get<SectorImage[]>(`${this.apiUrl}/${sectorId}/images`);
+  }
+
+  getStatistics(sectorId: string): Observable<Statistic[]> {
+    return this.http.get<Statistic[]>(`${this.apiUrl}/${sectorId}/statistics`);
+  }
+
+  getDirector(sectorId: string): Observable<SectorDirector> {
+    return this.http.get<SectorDirector>(`${this.apiUrl}/${sectorId}/director`);
+  }
+
+  getVision(sectorId: string): Observable<SectorVision> {
+    return this.http.get<SectorVision>(`${this.apiUrl}/${sectorId}/vision`);
+  }
+
+  getMission(sectorId: string): Observable<SectorMission> {
+    return this.http.get<SectorMission>(`${this.apiUrl}/${sectorId}/mission`);
+  }
+
+  getGoals(sectorId: string): Observable<SectorGoal[]> {
+    return this.http.get<SectorGoal[]>(`${this.apiUrl}/${sectorId}/goals`);
+  }
+
+  private getMockSector(id: string): Sector {
+    return {
+      Id: id,
+      Name: 'قطاع التعليم والطلاب',
+      AboutSector: {
+        Id: 1,
+        Title: 'عن القطاع',
+        About: 'يعد قطاع التعليم والطلاب من أهم القطاعات في كلية الطب، حيث يهتم بتطوير العملية التعليمية وتحسين مستوى الخدمات المقدمة للطلاب. يعمل القطاع على تحقيق التميز الأكاديمي من خلال برامج تعليمية متطورة تواكب أحدث المعايير العالمية في التعليم الطبي.',
+        SectorId: id
+      },
+      SectorImages: [
+        {
+          Id: 1,
+          Field: 'MainImage',
+          UrlPath: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800',
+          SectorId: id
+        }
+      ],
+      Statistics: [
+        { Id: 1, Title: 'عدد الطلاب', Count: 2500, SectorId: id },
+        { Id: 2, Title: 'أعضاء هيئة التدريس', Count: 180, SectorId: id },
+        { Id: 3, Title: 'البرامج الدراسية', Count: 12, SectorId: id },
+        { Id: 4, Title: 'المعامل والقاعات', Count: 45, SectorId: id }
+      ],
+      Director: {
+        Id: 1,
+        Name: 'أ.د. محمد أحمد السيد',
+        Title: 'مدير قطاع التعليم والطلاب',
+        Message: 'يسعدني أن أرحب بكم في قطاع التعليم والطلاب بكلية الطب. نعمل بكل جد واجتهاد لتوفير بيئة تعليمية متميزة تساعد طلابنا على تحقيق أهدافهم الأكاديمية والمهنية. نؤمن بأهمية التطوير المستمر والابتكار في العملية التعليمية لإعداد أطباء متميزين قادرين على خدمة المجتمع.',
+        ImageUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400',
+        SectorId: id
+      },
+      Vision: {
+        Id: 1,
+        Vision: 'أن نكون قطاعاً رائداً في التعليم الطبي على المستوى الإقليمي والدولي، ونساهم في تخريج أطباء متميزين قادرين على خدمة المجتمع وتطوير المنظومة الصحية.',
+        SectorId: id
+      },
+      Mission: {
+        Id: 1,
+        Mission: 'تقديم تعليم طبي عالي الجودة يعتمد على أحدث المعايير العالمية، وتوفير بيئة داعمة للطلاب، وتطوير قدراتهم العلمية والعملية والإنسانية لإعداد كوادر طبية متميزة.',
+        SectorId: id
+      },
+      Goals: [
+        { Id: 1, Goal: 'تطوير البرامج الأكاديمية بما يتوافق مع المعايير الدولية للتعليم الطبي', OrderIndex: 1, SectorId: id },
+        { Id: 2, Goal: 'تحسين جودة التدريس والتدريب السريري من خلال استخدام أحدث الأساليب التعليمية', OrderIndex: 2, SectorId: id },
+        { Id: 3, Goal: 'دعم الطلاب أكاديمياً ونفسياً واجتماعياً لضمان تفوقهم العلمي', OrderIndex: 3, SectorId: id },
+        { Id: 4, Goal: 'تعزيز البحث العلمي والابتكار في المجالات الطبية المختلفة', OrderIndex: 4, SectorId: id },
+        { Id: 5, Goal: 'بناء شراكات محلية ودولية مع المؤسسات التعليمية والصحية المرموقة', OrderIndex: 5, SectorId: id }
+      ]
+    };
+  }
 }
+
+
 

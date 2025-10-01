@@ -1,0 +1,35 @@
+<div class="vmg-section">
+  <div class="vmg-grid">
+    <!-- Vision -->
+    <div class="vmg-card vision-card" data-aos="fade-up" *ngIf="showVision && vision">
+      <div class="card-icon">
+        <span>🎯</span>
+      </div>
+      <h3 class="card-title">الرؤية</h3>
+      <p class="card-content">{{ vision.Vision }}</p>
+    </div>
+
+    <!-- Mission -->
+    <div class="vmg-card mission-card" data-aos="fade-up" data-aos-delay="100" *ngIf="showMission && mission">
+      <div class="card-icon">
+        <span>🚀</span>
+      </div>
+      <h3 class="card-title">الرسالة</h3>
+      <p class="card-content">{{ mission.Mission }}</p>
+    </div>
+
+    <!-- Goals -->
+    <div class="vmg-card goals-card full-width" data-aos="fade-up" data-aos-delay="200" *ngIf="showGoals && goals && goals.length > 0">
+      <div class="card-icon">
+        <span>📋</span>
+      </div>
+      <h3 class="card-title">الأهداف الاستراتيجية</h3>
+      <ul class="goals-list">
+        <li *ngFor="let goal of sortedGoals; let i = index" class="goal-item">
+          <span class="goal-number">{{ i + 1 }}</span>
+          <span class="goal-text">{{ goal.Goal }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
