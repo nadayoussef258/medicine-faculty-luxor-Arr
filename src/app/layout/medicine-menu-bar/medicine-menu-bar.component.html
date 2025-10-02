@@ -63,8 +63,7 @@
 
             <!-- Dropdown Menu for regular -->
             <ul
-              *ngIf="tab.title !== 'About the College' && tab.title !== 'Scientific Departments'"
-              class="dropdown-menu"
+              *ngIf="tab.type === 'menu'" class="dropdown-menu"
               [class.show]="activeDropdown === tab.id"
               [attr.aria-labelledby]="'dropdown-' + tab.id"
             >
@@ -84,8 +83,7 @@
 
             <!-- Two-column Dropdown Menu -->
             <div
-              *ngIf="tab.title === 'About the College' || tab.title === 'Scientific Departments'"
-              class="dropdown-columns"
+              *ngIf="tab.type === 'columns'" class="dropdown-columns"
               [class.show]="activeDropdown === tab.id"
               [attr.aria-labelledby]="'dropdown-' + tab.id"
             >
