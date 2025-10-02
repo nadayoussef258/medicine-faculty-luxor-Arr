@@ -13,6 +13,7 @@ export interface MenuTab {
   fragment?: string;
   icon?: string;
   isActive?: boolean;
+  type?: "menu" | "columns";
 }
 
 @Component({
@@ -37,12 +38,15 @@ export class MedicineMenuBarComponent {
     target: '/about-college',
     order: 2,
     menuTypeId: 'main',
+    type: "columns",
     childs: [
       {
         title: 'Overview',
         target: '/overview',
         order: 1,
         menuTypeId: 'sub',
+    type: "menu",
+
         childs: [
                     { title: 'Dean’s Word', target: '/dean-word', order: 1, menuTypeId: 'subsub' },
           { title: 'History', target: '/history', order: 2, menuTypeId: 'subsub' },
@@ -55,6 +59,8 @@ export class MedicineMenuBarComponent {
         target: '/management',
         order: 2,
         menuTypeId: 'sub',
+    type: "menu",
+
         childs: [
           { title: 'Organizational structure', target: '/structure', order: 1, menuTypeId: 'subsub' },
           // { title: 'Vice Dean (Education)', target: '/vice-dean-education', order: 2, menuTypeId: 'subsub' },
@@ -71,6 +77,8 @@ export class MedicineMenuBarComponent {
       target: '/sector',
       order: 3,
       menuTypeId: 'main',
+    type: "menu",
+
       childs: [
         { id: '1', title: 'Education and Students Affairs Sector', target: '/sector/1', order: 1, menuTypeId: 'sub' },
         { id: '2', title: 'Graduate Studies and Research Sector', target: '/sector/2', order: 2, menuTypeId: 'sub' },
@@ -83,6 +91,8 @@ export class MedicineMenuBarComponent {
       target: '/departments',
       order: 4,
       menuTypeId: 'main',
+    type: "columns",
+
       childs: [
         {
           title: 'Academic Departments',
@@ -118,9 +128,23 @@ export class MedicineMenuBarComponent {
       target: '/centers-units',
       order: 5,
       menuTypeId: 'main',
+    type: "columns",
+
       childs: [
-        { title: 'Centers', target: '/centers', order: 1, menuTypeId: 'sub' },
-        { title: 'Units', target: '/units', order: 2, menuTypeId: 'sub' }
+        { title: 'Centers', target: '/centers', order: 1, menuTypeId: 'sub', childs: [
+            { title: 'Anatomy', target: '/anatomy', order: 1, menuTypeId: 'subsub' },
+            { title: 'Physiology', target: '/physiology', order: 2, menuTypeId: 'subsub' },
+            { title: 'Biochemistry', target: '/biochemistry', order: 3, menuTypeId: 'subsub' },
+            { title: 'Pathology', target: '/pathology', order: 4, menuTypeId: 'subsub' },
+            { title: 'Pharmacology', target: '/pharmacology', order: 5, menuTypeId: 'subsub' }
+          ] },
+        { title: 'Units', target: '/units', order: 2, menuTypeId: 'sub', childs: [
+            { title: 'Anatomy', target: '/anatomy', order: 1, menuTypeId: 'subsub' },
+            { title: 'Physiology', target: '/physiology', order: 2, menuTypeId: 'subsub' },
+            { title: 'Biochemistry', target: '/biochemistry', order: 3, menuTypeId: 'subsub' },
+            { title: 'Pathology', target: '/pathology', order: 4, menuTypeId: 'subsub' },
+            { title: 'Pharmacology', target: '/pharmacology', order: 5, menuTypeId: 'subsub' }
+          ] }
       ]
     },
     {
@@ -129,6 +153,7 @@ export class MedicineMenuBarComponent {
       target: '/journal',
       order: 6,
       menuTypeId: 'main'
+
     },
     {
       id: '7',
