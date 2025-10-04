@@ -18,52 +18,53 @@ export interface DepartmentItem {
   encapsulation: ViewEncapsulation.None // This ensures CSS variables and styles are applied globally
 })
 export class DepartmentsComponent {
-  @Input() departments: DepartmentItem[] = [
+departments: DepartmentItem[] = [
     {
       id: '1',
-      title: 'CARDIOLOGY',
-      description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas adipisicing.',
+      title: 'أمراض القلب',
+      description: 'نوفر رعاية متخصصة في تشخيص وعلاج أمراض القلب والأوعية الدموية.',
       iconPath: 'images/icons_box/icon_1/icon-5.png',
-      iconAlt: 'Cardiology Icon'
+      iconAlt: 'أيقونة أمراض القلب'
     },
     {
       id: '2',
-      title: 'NEUROLOGY',
-      description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas adipisicing.',
+      title: 'طب الأعصاب',
+      description: 'رعاية شاملة لأمراض الدماغ والأعصاب باستخدام أحدث الوسائل الطبية.',
       iconPath: 'images/icons_box/icon_1/icon-4.png',
-      iconAlt: 'Neurology Icon'
+      iconAlt: 'أيقونة طب الأعصاب'
     },
     {
       id: '3',
-      title: 'ORTHOPEDICS',
-      description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas adipisicing.',
+      title: 'جراحة العظام',
+      description: 'تشخيص وعلاج إصابات وكسور العظام والمفاصل بأحدث التقنيات.',
       iconPath: 'images/icons_box/icon_1/icon-3.png',
-      iconAlt: 'Orthopedics Icon'
+      iconAlt: 'أيقونة جراحة العظام'
     },
     {
       id: '4',
-      title: 'CANCER DEPARTMENT',
-      description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas adipisicing.',
+      title: 'قسم الأورام',
+      description: 'رعاية متكاملة لعلاج الأورام باستخدام أحدث البروتوكولات الطبية.',
       iconPath: 'images/icons_box/icon_1/icon-2.png',
-      iconAlt: 'Cancer Department Icon'
+      iconAlt: 'أيقونة قسم الأورام'
     },
     {
       id: '5',
-      title: 'OPHTHALMOLOGY',
-      description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas adipisicing.',
+      title: 'طب العيون',
+      description: 'فحوصات وعلاجات متخصصة للحفاظ على صحة وسلامة العين.',
       iconPath: 'images/icons_box/icon_1/icon-1.png',
-      iconAlt: 'Ophthalmology Icon'
+      iconAlt: 'أيقونة طب العيون'
     },
     {
       id: '6',
-      title: 'RESPIRATORY',
-      description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas adipisicing.',
+      title: 'أمراض الجهاز التنفسي',
+      description: 'تشخيص وعلاج أمراض الرئة والجهاز التنفسي في بيئة طبية متطورة.',
       iconPath: 'images/icons_box/icon_1/icon.png',
-      iconAlt: 'Respiratory Icon'
+      iconAlt: 'أيقونة أمراض الجهاز التنفسي'
     }
   ];
 
-  @Input() sectionTitle: string = 'DEPARTMENTS';
+
+  @Input() sectionTitle: string = 'أقسام الكلية';
   @Input() showTitle: boolean = true;
 
   constructor() { }

@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-community',
   standalone: true,
   template: `
-    <h2>Community Service and Environmental Affairs Sector</h2>
-    <p>Content for Community Service and Environmental Affairs Sector.</p>
+    <h2>قطاع خدمة المجتمع والشؤون البيئية</h2>
+    <p>محتوى لقطاع خدمة المجتمع والشؤون البيئية.</p>
   `,
   styles: [`
     h2 {

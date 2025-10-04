@@ -1,4 +1,3 @@
-// medical-conference-hero.component.ts
 import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 
@@ -29,7 +28,7 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
         <p class="dean-title">{{ deanInfo.title }}</p>
         
         <div class="qualifications">
-          <h4>Academic Qualifications:</h4>
+          <h4>المؤهلات الأكاديمية:</h4>
           <ul class="qualifications-list">
             <li *ngFor="let qualification of deanInfo.qualifications">
               <i class="fas fa-graduation-cap"></i>
@@ -45,7 +44,7 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
         <div class="quote-icon">
           <i class="fas fa-quote-right"></i>
         </div>
-        <div class="message-text" [innerHTML]="deanInfo.message"></div>
+        <div class="message-text" [innerHTML]="displayedMessage"></div>
       </div>
     </div>
   </div>
@@ -56,7 +55,6 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  font-family: 'Poppins', 'Arial', sans-serif;
   direction: ltr;
   text-align: left;
 }
@@ -79,7 +77,6 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
 }
 
 .section-title h2 {
-  font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 600;
   text-align: center;
@@ -101,6 +98,7 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
   grid-template-columns: 400px 1fr;
   gap: 1.5rem;
   align-items: start;
+  
 }
 
 .dean-info-card {
@@ -111,11 +109,14 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
   border: 1px solid #FF8F00;
   position: sticky;
   top: 2rem;
+   direction:rtl;
+
 }
 
 .dean-image-section {
   text-align: center;
   margin-bottom: 2rem;
+  
 }
 
 .image-container {
@@ -167,11 +168,14 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
 }
 
 .qualifications {
-  text-align: left;
   margin-top: 1.5rem;
+   direction:ltr;
+
 }
 
 .qualifications h4 {
+   direction:rtl;
+
   font-size: 1.1rem;
   color: #5D4037;
   margin-bottom: 1rem;
@@ -179,6 +183,8 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
 }
 
 .qualifications-list {
+   direction:rtl;
+
   list-style: none;
   padding: 0;
 }
@@ -186,15 +192,16 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
 .qualifications-list li {
   padding: 0.5rem 0;
   color: #5D4037;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
 }
 
 .qualifications-list li i {
   color: #FF8F00;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .message-section {
@@ -226,6 +233,8 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
   white-space: pre-line;
   position: relative;
   z-index: 1;
+   direction:rtl;
+
 }
 
 /* Responsive Design */
@@ -299,24 +308,39 @@ import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angu
   `]
 })
 export class MedicalDeanSpeechComponent {
-    @Input() sectionTitle: string = `Dean's Message`;
+   sectionTitle: string = `كلمة العميد`;
+ @Input() fullText: string = '';
+  @Input() showFull: boolean = true;
 
   deanInfo = {
-    name: 'Prof. John Smith',
-    title: 'Dean, Faculty of Medicine',
-    image: 'assets/sliderr1.jpg',
+    name: 'أ.د. محمد شحات بدوي',
+    title: 'عميد كلية الطب',
+    image: 'assets/dean.png',
     message: `
-      Welcome to the Faculty of Medicine website. Our mission is to prepare generations of distinguished doctors capable of serving the community and providing the highest level of healthcare.
+      يسعدني أن احدثكم عن كلية طب الأقصر، هذا الصرح العلمي الذي يعتبر حلقة في مسيرة الطب المتميزة في مصر. نعمل –بإذن الله- أن يكون مركزًا للعلم، وملاذاً لشفاء المرضى، ومحرابًا لقيم الرحمة والكرامة الإنسانية.
+تحمل الكلية اسم مدينة كانت عاصمة لحضارة ارتبطت منذ آلاف السنين بالتفوق في الطب، ولا تزال جدران معابدها تكشف لنا أسرارًا في هذا المجال تضاف إلى ما تركته حضارة مصر القديمة من إرث علمي وإنساني. ثم تأتي الحضارة العربية الإسلامية تاركة ما تسجله المراجع العالمية من إنجازات طبية كانت من أسس قيام علم الطب الحديث.
+ونحن اليوم في كلية طب الأقصر نستلهم هذا الإرث العظيم في مسيرتنا لإثراء تلك المهنة السامية بجيل من الأطباء القادرين على حمل رسالة الطب بروح التميز والابتكار ومواكبة كل جديد. 
+ولا تكتفي الكلية بتخريج أطباء يمتلكون الكفاءة العلمية والعملية فحسب، بل تهتم بغرس قيم الرحمة والعطاء والنزاهة. 
+كما أن الكلية لا تقتصر على تعليم وتدريب الطلاب فحسب، بل يمتد دورها إلى خدمة المجتمع المحيط بها وذلك بالبدء في إنشاء مستشفى جامعي يغطي الاجتياجات العلاجية للمحافظة.
+وربما خارجها. كما نخطط أن تصل كوادر الكلية إلى أبعد القرى والنجوع من خلال القوافل التي تضم كوادر رفيعة المستوى.
+نمضي في مسيرتنا سائلين الله التوفيق في رسالتنا، وأن تصبح الكلية منارةً علمية وطبية لها موقعها بين المؤسسات الطبية العريقة.
 
-      Our faculty is always striving for excellence in medical education and scientific research, providing a modern educational environment that combines theory and practical application. We are keen to keep up with the latest developments in medicine and health sciences.
-
-      I wish you all success in your educational and professional journey.
     `,
-    qualifications: [
-      'PhD in Internal Medicine',
-      'Fellowship in Cardiology',
+   qualifications: [
+      'دكتوراه في الطب الباطني',
+      'زمالة في أمراض القلب',
     ]
+
   };
+get displayedMessage(): string {
+  if (this.showFull) {
+    return this.deanInfo.message;   // النص كامل
+  } else {
+    // نجيب أول 300 حرف ونضيف "..."
+    return this.deanInfo.message.slice(0, 810) + '...';
+  }
+}
 
   constructor() { }
+
 }

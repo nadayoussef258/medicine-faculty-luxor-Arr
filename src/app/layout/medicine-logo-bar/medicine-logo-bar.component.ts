@@ -16,6 +16,8 @@ export interface ContactDto{
   address?: string;
   phone?: string;
   email?: string;
+  website?: string;
+  facebook?: string;
 }
 
 @Component({
@@ -28,27 +30,25 @@ export interface ContactDto{
 export class MedicineLogoBarComponent {
   @Input() logoData: LogoDto = {
     logoPath: 'assets/logo.png',
-    logoAltText: 'Faculty Logo',
-    title: 'Faculty of Medicine'
+    logoAltText: 'شعار الكلية',
+    title: 'كلية الطب'
   };
-  @Input() Address: string='Address';
-  @Input() Phone: string='Phone';
+  @Input() Address: string='العنوان';
+  @Input() Phone: string='رقم الهاتف';
 
 
   @Input() contactInfo: ContactDto = {
-    address: '525 W Slauson Ave, LA, CA 90056, USA',
+    address: 'الأقصر-  مدينة طيبة الجديدة – بجوار جهاز المدينة',
     phone: '(555) 555-1234',
     email: 'info@medicare.com',
+    website: 'http://www.luxor.edu.eg',
+    facebook: 'https://www.facebook.com/كلية الطب جامعة-الاقصر/112526971198533/',
   };
 
   constructor(private router: Router) { }
 
   openLocation(): void {
-    this.router.navigate(['/']);
-    // if (this.contactInfo.address) {
-    //   // This would typically open a map service
-    //   window.open(`https://maps.google.com/?q=${encodeURIComponent(this.contactInfo.address)}`, '_blank');
-    // }
+    window.open('https://maps.app.goo.gl/BMJvNXCY6eSSU7JA7', '_blank');
   }
 
   openPhone(phone: string): void {

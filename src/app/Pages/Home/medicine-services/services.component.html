@@ -30,14 +30,7 @@
       <!-- Card Content -->
       <div class="card-content">
         <p class="card-description">{{ service.description }}</p>
-        <a
-          [href]="service.readMoreUrl"
-          class="readmore-link"
-          (click)="onReadMoreClick(service, $event)"
-          *ngIf="service.readMoreUrl"
-        >
-          Read more
-        </a>
+     
       </div>
     </div>
   </div>
@@ -45,7 +38,7 @@
   <!-- All Services Button -->
   <div class="all-services-section" *ngIf="showAllServicesButton">
     <a
-      [href]="allServicesUrl"
+  [routerLink]="[allServicesUrl]"
       class="all-services-btn"
       (click)="onAllServicesClick()"
     >

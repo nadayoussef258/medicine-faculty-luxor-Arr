@@ -20,23 +20,23 @@ export class StaffAdvancedSearchComponent {
   };
 
   colleges = [
-    'Faculty of Medicine'
-  ];
+  'كلية الطب'
+];
 
-  departments = [
-    'Surgery Department',
-    'Internal Medicine Department',
-    'Pediatrics Department',
-    'Gynecology and Obstetrics Department',
-    'Radiology Department',
-    'Pathology Department'
-  ];
+departments = [
+  'قسم الجراحة',
+  'قسم الباطنة',
+  'قسم طب الأطفال',
+  'قسم النساء والتوليد',
+  'قسم الأشعة',
+  'قسم الباثولوجيا'
+];
 
-  academicRanks = [
-    'Professor',
-    'Associate Professor',
-    'Lecturer'
-  ];
+academicRanks = [
+  'أستاذ',
+  'أستاذ مساعد',
+  'مدرس'
+];
 
   performSearch(): void {
     this.searchEvent.emit(this.searchData);

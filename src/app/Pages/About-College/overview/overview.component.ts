@@ -4,12 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-overview',
   standalone: true,
   template: `
-    <h2>Overview of the College</h2>
+    <h2>نظرة عامة على الكلية</h2>
     <ul>
-      <li><a routerLink="/overview/history">History of the College</a></li>
-      <li><a routerLink="/overview/objectives">Strategic Objectives</a></li>
-      <li><a routerLink="/overview/structure">Organizational Structure</a></li>
-      <li><a routerLink="/overview/vision-mission">Vision and Mission</a></li>
+      <li><a routerLink="/overview/history">تاريخ الكلية</a></li>
+      <li><a routerLink="/overview/objectives">الأهداف الاستراتيجية</a></li>
+      <li><a routerLink="/overview/structure">الهيكل التنظيمي</a></li>
+      <li><a routerLink="/overview/vision-mission">الرؤية والرسالة</a></li>
     </ul>
   `,
   styles: [`

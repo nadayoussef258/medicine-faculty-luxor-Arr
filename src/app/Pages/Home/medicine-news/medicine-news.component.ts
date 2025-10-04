@@ -20,52 +20,51 @@ export interface NewsItem {
   styleUrls: ['./medicine-news.component.css']
 })
 export class MedicineNewsComponent implements OnInit, OnDestroy {
-  @Input() newsItems: NewsItem[] = [
+ newsItems: NewsItem[] = [
     {
       id: 1,
-      title: 'Breakthrough in Cancer Treatment',
-      excerpt: 'New research shows promising results in targeted therapy for lung cancer patients.',
-      author: 'Dr. Sarah Johnson',
-      specialty: 'Oncology',
+      title: 'اختراق جديد في علاج السرطان',
+      excerpt: 'أبحاث حديثة تُظهر نتائج واعدة في العلاج الموجّه لمرضى سرطان الرئة.',
+      author: 'د. سارة جونسون',
+      specialty: 'الأورام',
       date: '2023-12-15',
       imageUrl: 'assets/event1.jpg',
       readMoreUrl: '#'
     },
     {
       id: 2,
-      title: 'Advancements in Robotic Surgery',
-      excerpt: 'Minimally invasive procedures are becoming more precise with new robotic systems.',
-      author: 'Dr. Michael Chen',
-      specialty: 'Surgery',
+      title: 'تطورات في الجراحة الروبوتية',
+      excerpt: 'الإجراءات طفيفة التوغل أصبحت أكثر دقة بفضل الأنظمة الروبوتية الجديدة.',
+      author: 'د. مايكل تشين',
+      specialty: 'الجراحة',
       date: '2023-12-10',
       imageUrl: 'assets/event2.jpg',
       readMoreUrl: '#'
     },
     {
       id: 3,
-      title: 'Mental Health Awareness Month',
-      excerpt: 'Understanding the importance of mental health in overall patient care.',
-      author: 'Dr. Emily Rodriguez',
-      specialty: 'Psychiatry',
+      title: 'شهر التوعية بالصحة النفسية',
+      excerpt: 'فهم أهمية الصحة النفسية كجزء أساسي من رعاية المريض.',
+      author: 'د. إميلي رودريغيز',
+      specialty: 'الطب النفسي',
       date: '2023-12-05',
       imageUrl: 'assets/event3.jpg',
       readMoreUrl: '#'
     },
     {
       id: 4,
-      title: 'New Vaccine Developments',
-      excerpt: 'Latest updates on vaccine research for infectious diseases.',
-      author: 'Dr. James Wilson',
-      specialty: 'Immunology',
+      title: 'تطورات جديدة في اللقاحات',
+      excerpt: 'أحدث المستجدات في أبحاث اللقاحات لمكافحة الأمراض المعدية.',
+      author: 'د. جيمس ويلسون',
+      specialty: 'المناعة',
       date: '2023-11-28',
       imageUrl: 'assets/event1.jpg',
       readMoreUrl: '#'
     }
   ];
 
-  @Input() sectionTitle: string = 'Featured News and Insights';
-  @Input() sectionSubtitle: string = 'Read the latest news about medicross as well as medical news around the world.';
-  @Input() showTitle: boolean = true;
+  @Input() sectionTitle: string = 'آخر الأخبار';
+ @Input() showTitle: boolean = true;
   @Input() itemsPerView: number = 3;
   @Input() autoPlay: boolean = false;
   @Input() autoPlayInterval: number = 5000;

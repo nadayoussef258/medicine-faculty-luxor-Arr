@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 export interface FooterContactInfo {
   logoPath: string;
@@ -39,44 +40,46 @@ export interface FooterCopyright {
 @Component({
   selector: 'ck-medicine-footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './medicine-footer.component.html',
   styleUrls: ['./medicine-footer.component.css']
 })
 export class MedicineFooterComponent {
   @Input() contactInfo: FooterContactInfo = {
     logoPath: 'assets/logo.png',
-    logoAlt: 'MEDICARE',
-    description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fame ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.',
-    address: "45 Queen's Park Rd, Brighton, UK",
+    logoAlt: 'شعار كلية الطب',
+    description: 'كلية الطب – جامعة الأقصر تصنع أطباء المستقبل بالعلم، والرحمة، والابتكار.',
+    address: "الأقصر-  مدينة طيبة الجديدة – بجوار جهاز المدينة ",
     phone: '(094) 123 4567 - (094) 123 4568',
-    email: 'medicareplus@domain.com'
+    email: 'www.luxor.edu.eg'
   };
 
   @Input() quickLinks: FooterQuickLink[] = [
-    { text: 'Home', url: '#', icon: '+' },
-    { text: 'About', url: '#', icon: '+' },
-    { text: 'Services', url: '#', icon: '+' },
-    { text: 'Timetable', url: '#', icon: '+' },
-    { text: 'Blog', url: '#', icon: '+' },
-    { text: 'Contact', url: '#', icon: '+' }
+    { text: 'الرئيسية', url: '/', icon: '+' },
+    // { text: 'About the College', url: '/about-college', icon: '+' },
+    // { text: 'Sectors', url: '/sector', icon: '+' },
+    // { text: 'Scientific Departments', url: '/departments', icon: '+' },
+    { text: 'المراكز والوحدات', url: '/centers-units', icon: '+' },
+    { text: 'مجلة الكلية', url: '/journal', icon: '+' },
+    { text: 'أعضاء هيئة التدريس', url: '/staff-members', icon: '+' },
+    { text: 'الأخبار', url: '/news', icon: '+' }
   ];
 
   @Input() latestPosts: FooterPost[] = [
     {
-      title: 'Lorem ipsum dolor sit amet, consectetuer',
-      url: '#',
-      date: 'june 12, 2017'
+      title: 'فتح مركز الامتياز في البحث العلمي',
+      url: '/news/detail/1',
+      date: '2024-08-13'
     },
     {
-      title: 'Aliquam tincidunt mauris eu risus amet',
-      url: '#',
-      date: 'june 12, 2017'
+      title: 'تسجيل اتفاقية التعاون مع الجامعة الألمانية',
+      url: '/news/detail/2',
+      date: '2024-08-10'
     },
     {
-      title: 'Morbi in sem quis dui placerat ornare column',
-      url: '#',
-      date: 'june 12, 2017'
+      title: 'انطلاق برنامج الماجستير في الذكاء الاصطناعي',
+      url: '/news/detail/3',
+      date: '2024-08-08'
     }
   ];
 

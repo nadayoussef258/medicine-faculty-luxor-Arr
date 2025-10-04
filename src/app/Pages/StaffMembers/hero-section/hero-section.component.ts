@@ -9,10 +9,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './hero-section.component.css'
 })
 export class StaffHeroSectionComponent {
-  heroData = {
-    title: 'Faculty Members',
-    subtitle: 'Get to know the faculty members at Luxor University',
-    backgroundImage: 'assets/staff.jpg',
-    searchPlaceholder: 'Search for a faculty member...'
-  };
+heroData = {
+  title: 'أعضاء هيئة التدريس',
+  subtitle: 'تعرّف على أعضاء هيئة التدريس بجامعة الأقصر',
+  backgroundImage: 'assets/staff.jpg',
+  searchPlaceholder: 'ابحث عن عضو هيئة تدريس...'
+};
+
 }

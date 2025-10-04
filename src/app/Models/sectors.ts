@@ -85,6 +85,69 @@ export interface SectorDto {
 
 
 ////////////////////////////////////////////
+
+export interface AboutSector {
+  Id?: number;
+  About: string;
+  Title: string;
+  SectorId?: string;
+}
+
+export interface SectorImage {
+  Id?: number;
+  Field?: string;
+  UrlPath: string;
+  SectorId?: string;
+}
+
+export interface Statistic {
+  Id?: number;
+  Title: string;
+  Count: number;
+  SectorId?: string;
+}
+
+export interface SectorDirector {
+  Id?: number;
+  Name: string;
+  Title: string;
+  Message: string;
+  ImageUrl: string;
+  SectorId?: string;
+}
+
+export interface SectorVision {
+  Id?: number;
+  Vision: string;
+  SectorId?: string;
+}
+
+export interface SectorMission {
+  Id?: number;
+  Mission: string;
+  SectorId?: string;
+}
+
+export interface SectorGoal {
+  Id?: number;
+  Goal: string;
+  OrderIndex?: number;
+  SectorId?: string;
+}
+
+export interface Sector {
+  Id: string;
+  Name: string;
+  AboutSector?: AboutSector;
+  SectorImages?: SectorImage[];
+  Statistics?: Statistic[];
+  Director?: SectorDirector;
+  Vision?: SectorVision;
+  Mission?: SectorMission;
+  Goals?: SectorGoal[];
+}
+
+//////////////
 export interface AboutSector{
     Id?: number;
     About: string;

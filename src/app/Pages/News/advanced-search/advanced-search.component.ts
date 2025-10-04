@@ -29,18 +29,18 @@ export class AdvancedSearchComponent {
   ];
 
   months = [
-    { value: '01', label: 'January' },
-    { value: '02', label: 'February' },
-    { value: '03', label: 'March' },
-    { value: '04', label: 'April' },
-    { value: '05', label: 'May' },
-    { value: '06', label: 'June' },
-    { value: '07', label: 'July' },
-    { value: '08', label: 'August' },
-    { value: '09', label: 'September' },
-    { value: '10', label: 'October' },
-    { value: '11', label: 'November' },
-    { value: '12', label: 'December' }
+    { value: '01', label: 'يناير' },
+    { value: '02', label: 'فبراير' },
+    { value: '03', label: 'مارس' },
+    { value: '04', label: 'أبريل' },
+    { value: '05', label: 'مايو' },
+    { value: '06', label: 'يونيو' },
+    { value: '07', label: 'يوليو' },
+    { value: '08', label: 'أغسطس' },
+    { value: '09', label: 'سبتمبر' },
+    { value: '10', label: 'أكتوبر' },
+    { value: '11', label: 'نوفمبر' },
+    { value: '12', label: 'ديسمبر' }
   ];
 
   performSearch(): void {

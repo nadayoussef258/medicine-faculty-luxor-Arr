@@ -9,8 +9,8 @@
   <div *ngIf="!loading && services.length === 0" class="empty-state">
     <div class="empty-content">
       <i class="pi pi-inbox empty-icon"></i>
-      <h3>No Services Available</h3>
-      <p>No services are currently available in this sector</p>
+      <h3>لا يوجد خدمات متاحة</h3>
+      <p>لا يوجد خدمات حاليا لهذا القطاع</p>
     </div>
   </div>
 
@@ -42,19 +42,19 @@
             <div class="service-info">
               <div class="info-item">
                 <i class="pi pi-clock info-icon"></i>
-                <span class="info-label">Expected Duration:</span>
+                <span class="info-label">المدة المتوقعة :</span>
                 <span class="info-value">{{ service.duration }}</span>
               </div>
 
               <div class="info-item" *ngIf="service.fees">
                 <i class="pi pi-dollar info-icon"></i>
-                <span class="info-label">Fees:</span>
+                <span class="info-label">رسوم:</span>
                 <span class="info-value">{{ service.fees }} EGP</span>
               </div>
 
               <div class="info-item" *ngIf="!service.fees">
                 <i class="pi pi-check info-icon"></i>
-                <span class="info-label">Free</span>
+                <span class="info-label">مجاني</span>
               </div>
             </div>
 
@@ -106,7 +106,7 @@
 
       <!-- Service Description -->
       <div class="detail-section">
-        <h4>Service Description</h4>
+        <h4>وصف الخدمة</h4>
         <p class="detail-description">{{ selectedService.details }}</p>
       </div>
 
@@ -114,12 +114,12 @@
 
       <!-- Service Information -->
       <div class="detail-section">
-        <h4>Service Information</h4>
+        <h4>معلومات الخدمة</h4>
         <div class="detail-info-grid">
           <div class="info-card">
             <i class="pi pi-clock"></i>
             <div class="info-content">
-              <span class="info-label">Expected Duration</span>
+              <span class="info-label">المدة المتوقعة</span>
               <span class="info-value">{{ selectedService.duration }}</span>
             </div>
           </div>
@@ -127,7 +127,7 @@
           <div class="info-card">
             <i class="pi pi-dollar"></i>
             <div class="info-content">
-              <span class="info-label">Fees</span>
+              <span class="info-label">الرسوم</span>
               <span class="info-value">{{ selectedService.fees ? selectedService.fees + ' EGP' : 'Free' }}</span>
             </div>
           </div>
@@ -135,7 +135,7 @@
           <div class="info-card">
             <i [class]="selectedService.isOnline ? 'pi pi-globe' : 'pi pi-building'"></i>
             <div class="info-content">
-              <span class="info-label">Service Type</span>
+              <span class="info-label">نوع الخدمة</span>
               <span class="info-value">{{ selectedService.isOnline ? 'Online' : 'Office-based' }}</span>
             </div>
           </div>
@@ -144,15 +144,15 @@
 
       <!-- Contact Information -->
       <div class="detail-section" *ngIf="selectedService.contactPerson || selectedService.contactPhone">
-        <h4>Contact Information</h4>
+        <h4>بيانات التواصل:</h4>
         <div class="contact-info">
           <div class="contact-item" *ngIf="selectedService.contactPerson">
             <i class="pi pi-user"></i>
-            <span><strong>Responsible Employee:</strong> {{ selectedService.contactPerson }}</span>
+            <span><strong>الموظف المسئول:</strong> {{ selectedService.contactPerson }}</span>
           </div>
           <div class="contact-item" *ngIf="selectedService.contactPhone">
             <i class="pi pi-phone"></i>
-            <span><strong>Phone:</strong>
+            <span><strong>رقم الهاتف:</strong>
               <a [href]="'tel:' + selectedService.contactPhone">{{ selectedService.contactPhone }}</a>
             </span>
           </div>

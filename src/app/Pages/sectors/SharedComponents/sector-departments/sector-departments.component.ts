@@ -56,8 +56,8 @@ export class SectorDepartmentsComponent implements OnInit {
     //   }
     // });
     this.departments = [
-      { id: '1', name: 'Registration Department', description: 'Department responsible for student registration.', manager: 'Ahmed Mohamed', email: 'ahmed@example.com', phone: '0123456789', sectorId: '1', image: 'assets/slider2.jpg' },
-      { id: '2', name: 'Exams Department', description: 'Department responsible for organizing exams.', manager: 'Fatima Ali', email: 'fatima@example.com', phone: '0987654321', sectorId: '1', image: 'assets/slider3.jpg' }
+      { id: '1', name: 'قسم التسجيل', description: 'القسم المسؤول عن تسجيل الطلاب.', manager: 'أحمد محمد', email: 'ahmed@example.com', phone: '0123456789', sectorId: '1', image: 'assets/slider2.jpg' },
+      { id: '2', name: 'قسم الامتحانات', description: 'القسم المسؤول عن تنظيم الامتحانات.', manager: 'فاطمة علي', email: 'fatima@example.com', phone: '0987654321', sectorId: '1', image: 'assets/slider3.jpg' }
     ];
     this.loading = false; // Set loading to false since we are using mock data
   }

@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-education-students',
   standalone: true,
   template: `
-    <h2>Education and Students Affairs Sector</h2>
-    <p>Content for Education and Students Affairs Sector.</p>
+    <h2>قطاع التعليم وشؤون الطلاب</h2>
+    <p>محتوى لقطاع التعليم وشؤون الطلاب.</p>
   `,
   styles: [`
     h2 {

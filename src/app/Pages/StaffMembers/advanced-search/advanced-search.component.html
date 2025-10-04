@@ -3,12 +3,12 @@
     <div class="search-form">
       <div class="search-row">
         <div class="search-field">
-          <label for="name">Name</label>
+          <label for="name">الاسم</label>
           <input
             type="text"
             id="name"
             [(ngModel)]="searchData.name"
-            placeholder="Type the member's name..."
+            placeholder="اكتب اسم العضو..."
             class="search-input"
           />
         </div>
@@ -18,13 +18,13 @@
       
 
         <div class="search-field">
-          <label for="department">Department</label>
+          <label for="department">القسم</label>
           <select
             id="department"
             [(ngModel)]="searchData.department"
             class="search-select"
           >
-            <option value="">All Departments</option>
+            <option value="">جميع الأقسام</option>
             <option *ngFor="let department of departments" [value]="department">
               {{ department }}
             </option>
@@ -34,13 +34,13 @@
 
       <div class="search-row">
         <div class="search-field">
-          <label for="academicRank">Academic Rank</label>
+          <label for="academicRank">الرتبة الأكاديمية</label>
           <select
             id="academicRank"
             [(ngModel)]="searchData.academicRank"
             class="search-select"
           >
-            <option value="">All Ranks</option>
+            <option value="">جميع الرتب</option>
             <option *ngFor="let rank of academicRanks" [value]="rank">
               {{ rank }}
             </option>
@@ -51,11 +51,11 @@
       <div class="search-actions">
         <button class="search-btn" (click)="performSearch()">
           <i class="pi pi-search"></i>
-          Search
+          بحث
         </button>
         <button class="clear-btn" (click)="clearSearch()">
           <i class="pi pi-refresh"></i>
-          Clear Search
+          مسح البحث
         </button>
       </div>
     </div>

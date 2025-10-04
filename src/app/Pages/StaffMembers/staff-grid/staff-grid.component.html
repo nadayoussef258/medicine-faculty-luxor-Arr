@@ -27,16 +27,17 @@
 
     <div class="modal" *ngIf="showModal">
       <div class="modal-content">
-        <span class="close" (click)="closeModal()">&times;</span>
-        <h2>{{ selectedStaff.name }}</h2>
-        <p><strong>Academic Rank:</strong> {{ selectedStaff.academicRank }}</p>
-        <p><strong>College & Department:</strong> {{ selectedStaff.college }} - {{ selectedStaff.department }}</p>
-        <p><strong>Research Interests / Specialization:</strong> {{ selectedStaff.researchInterests }}</p>
-        <p><strong>Email:</strong> {{ selectedStaff.email }}</p>
-        <p *ngIf="selectedStaff.phone"><strong>Phone:</strong> {{ selectedStaff.phone }}</p>
-        <p *ngIf="selectedStaff.personalPage"><a [href]="selectedStaff.personalPage" target="_blank">Personal Page</a></p>
-        <p *ngIf="selectedStaff.cvLink"><a [href]="selectedStaff.cvLink" target="_blank">Curriculum Vitae</a></p>
-      </div>
+  <span class="close" (click)="closeModal()">&times;</span>
+  <h2>{{ selectedStaff.name }}</h2>
+  <p><strong>الرتبة الأكاديمية:</strong> {{ selectedStaff.academicRank }}</p>
+  <p><strong>الكلية والقسم:</strong> {{ selectedStaff.college }} - {{ selectedStaff.department }}</p>
+  <p><strong>الاهتمامات البحثية / التخصص:</strong> {{ selectedStaff.researchInterests }}</p>
+  <p><strong>البريد الإلكتروني:</strong> {{ selectedStaff.email }}</p>
+  <p *ngIf="selectedStaff.phone"><strong>الهاتف:</strong> {{ selectedStaff.phone }}</p>
+  <p *ngIf="selectedStaff.personalPage"><a [href]="selectedStaff.personalPage" target="_blank">الصفحة الشخصية</a></p>
+  <p *ngIf="selectedStaff.cvLink"><a [href]="selectedStaff.cvLink" target="_blank">السيرة الذاتية</a></p>
+</div>
+
     </div>
   </div>
 </div>

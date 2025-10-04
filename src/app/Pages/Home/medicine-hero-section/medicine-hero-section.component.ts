@@ -19,28 +19,29 @@ export interface HeroSlideDto {
   encapsulation: ViewEncapsulation.None // This allows global CSS variables to work
 })
 export class MedicineHeroSectionComponent implements OnInit, OnDestroy {
-  @Input() slides: HeroSlideDto[] = [
+slides: HeroSlideDto[] = [
     {
       id: 1,
       imageUrl: 'assets/sliderr1.jpg',
-      title: 'Advanced Medical Care',
-      subtitle: 'Providing cutting-edge healthcare solutions for better patient outcomes'
+      title: 'رعاية طبية متقدمة',
+      subtitle: 'نقدم حلول رعاية صحية متطورة لتحقيق أفضل نتائج للمرضى'
     },
     {
       id: 2,
       imageUrl: 'assets/slider2.jpg',
-      title: 'Expert Medical Team',
-      subtitle: 'Our experienced doctors and specialists are here to help you'
+      title: 'فريق طبي متخصص',
+      subtitle: 'أطباؤنا ذوو الخبرة والمتخصصون هنا لمساعدتك'
     },
     {
       id: 3,
       imageUrl: 'assets/slider3.jpg',
-      title: 'State-of-the-Art Facilities',
-      subtitle: 'Modern equipment and comfortable environment for your care'
+      title: 'مرافق حديثة ومتطورة',
+      subtitle: 'معدات عصرية وبيئة مريحة لرعايتك'
     }
   ];
 
-  @Input() buttonText: string = 'About Us';
+
+  @Input() buttonText: string = 'عن الكلية';
   @Input() buttonRoute: string = '/';
   @Input() autoPlayInterval: number = 5000;
   @Input() showControls: boolean = true;

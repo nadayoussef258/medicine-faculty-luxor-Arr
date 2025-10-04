@@ -31,75 +31,76 @@ export class NewsGridComponent {
   newsData = [
   {
     id: 1,
-    title: 'Opening of the Center of Excellence in Scientific Research',
-    summary: 'The Center of Excellence in Scientific Research was inaugurated at Luxor University, aiming to promote scientific research and innovation in various scientific fields.',
+    title: 'افتتاح مركز التميز في البحث العلمي',
+    summary: 'تم افتتاح مركز التميز في البحث العلمي بجامعة الأقصر، بهدف تعزيز البحث العلمي والابتكار في مختلف المجالات العلمية.',
     image: 'assets/slider2.jpg',
     date: '2024-08-13',
-    category: 'Academic News',
-    readTime: '3 minutes',
-    author: 'University Administration'
+    category: 'أخبار أكاديمية',
+    readTime: '3 دقائق',
+    author: 'إدارة الجامعة'
   },
   {
     id: 2,
-    title: 'Signing of Cooperation Agreement with a German University',
-    summary: 'Luxor University signed a cooperation agreement with the Technical University of Munich in Germany to enhance student and academic exchange between the two universities.',
+    title: 'توقيع اتفاقية تعاون مع جامعة ألمانية',
+    summary: 'وقّعت جامعة الأقصر اتفاقية تعاون مع الجامعة التقنية في ميونخ بألمانيا لتعزيز التبادل الطلابي والأكاديمي بين الجامعتين.',
     image: 'assets/slider3.jpg',
     date: '2024-08-10',
-    category: 'International Cooperation',
-    readTime: '4 minutes',
-    author: 'University Administration'
+    category: 'التعاون الدولي',
+    readTime: '4 دقائق',
+    author: 'إدارة الجامعة'
   },
   {
     id: 3,
-    title: 'Launch of Master’s Program in Artificial Intelligence',
-    summary: 'Luxor University announced the launch of a Master’s program in Artificial Intelligence and Machine Learning to keep pace with modern technological developments.',
+    title: 'إطلاق برنامج ماجستير في الذكاء الاصطناعي',
+    summary: 'أعلنت جامعة الأقصر عن إطلاق برنامج ماجستير في الذكاء الاصطناعي وتعلم الآلة لمواكبة التطورات التكنولوجية الحديثة.',
     image: 'assets/slider3.jpg',
     date: '2024-08-08',
-    category: 'Academic Programs',
-    readTime: '5 minutes',
-    author: 'University Administration'
+    category: 'البرامج الأكاديمية',
+    readTime: '5 دقائق',
+    author: 'إدارة الجامعة'
   },
   {
     id: 4,
-    title: 'University Team Wins Robotics Competition',
-    summary: 'Luxor University team won first place in the regional robotics competition, reflecting excellence in engineering and technology.',
+    title: 'فوز فريق الجامعة بمسابقة الروبوتات',
+    summary: 'حصل فريق جامعة الأقصر على المركز الأول في المسابقة الإقليمية للروبوتات، في إنجاز يعكس التميز في الهندسة والتكنولوجيا.',
     image: 'assets/slider2.jpg',
     date: '2024-08-05',
-    category: 'Student Achievements',
-    readTime: '3 minutes',
-    author: 'University Administration'
+    category: 'إنجازات طلابية',
+    readTime: '3 دقائق',
+    author: 'إدارة الجامعة'
   },
   {
     id: 5,
-    title: 'International Conference on Sustainable Development',
-    summary: 'Luxor University hosted an international conference on sustainable development, with the participation of experts from various countries around the world.',
+    title: 'المؤتمر الدولي للتنمية المستدامة',
+    summary: 'استضافت جامعة الأقصر مؤتمرًا دوليًا حول التنمية المستدامة بمشاركة خبراء من دول مختلفة حول العالم.',
     image: 'assets/slider3.jpg',
     date: '2024-08-01',
-    category: 'Conferences',
-    readTime: '6 minutes',
-    author: 'University Administration'
+    category: 'مؤتمرات',
+    readTime: '6 دقائق',
+    author: 'إدارة الجامعة'
   },
   {
     id: 6,
-    title: 'University Infrastructure Development',
-    summary: 'The development of the university’s infrastructure has been completed, including the modernization of laboratories and the digital library.',
+    title: 'تطوير البنية التحتية للجامعة',
+    summary: 'تم الانتهاء من تطوير البنية التحتية للجامعة، بما في ذلك تحديث المعامل والمكتبة الرقمية.',
     image: 'assets/slider2.jpg',
     date: '2024-07-28',
-    category: 'Infrastructure Development',
-    readTime: '4 minutes',
-    author: 'University Administration'
+    category: 'تطوير البنية التحتية',
+    readTime: '4 دقائق',
+    author: 'إدارة الجامعة'
   },
   {
     id: 7,
-    title: 'University Infrastructure Development',
-    summary: 'The development of the university’s infrastructure has been completed, including the modernization of laboratories and the digital library.',
+    title: 'تطوير البنية التحتية للجامعة',
+    summary: 'تم الانتهاء من تطوير البنية التحتية للجامعة، بما في ذلك تحديث المعامل والمكتبة الرقمية.',
     image: 'assets/slider2.jpg',
     date: '2024-07-28',
-    category: 'Infrastructure Development',
-    readTime: '4 minutes',
-    author: 'University Administration'
+    category: 'تطوير البنية التحتية',
+    readTime: '4 دقائق',
+    author: 'إدارة الجامعة'
   }
 ];
+
 
   constructor(private router: Router) {}
 

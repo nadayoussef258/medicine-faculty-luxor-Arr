@@ -16,17 +16,17 @@ export class NewsDetailComponent implements OnInit {
   newsList = [
     {
       id: 1,
-      title: 'Opening of the Center of Excellence in Scientific Research',
-      summary: 'The Center of Excellence in Scientific Research was inaugurated at Luxor University, aiming to promote scientific research and innovation in various scientific fields.',
+      title: 'افتتاح مركز التميز في البحث العلمي',
+      summary: 'تم افتتاح مركز التميز في البحث العلمي بجامعة الأقصر، بهدف تعزيز البحث العلمي والابتكار في مختلف المجالات العلمية.',
       content: [
-        'The Center of Excellence in Scientific Research was inaugurated at Luxor University, aiming to promote scientific research and innovation in various scientific fields.',
-        'It will provide advanced facilities and support for researchers and students.',
-        'The center will collaborate with international institutions to enhance research quality.'
+        'تم افتتاح مركز التميز في البحث العلمي بجامعة الأقصر، بهدف تعزيز البحث العلمي والابتكار في مختلف المجالات العلمية.',
+        'سيوفر المركز مرافق متقدمة ودعمًا للباحثين والطلاب.',
+        'كما سيتعاون مع مؤسسات دولية لتعزيز جودة الأبحاث.'
       ],
       date: new Date('2024-08-13T10:00:00'),
-      category: 'Academic News',
-      author: 'University Administration',
-      readTime: '3 minutes',
+      category: 'أخبار أكاديمية',
+      author: 'إدارة الجامعة',
+      readTime: '3 دقائق',
       images: [
         'assets/slider2.jpg',
         'assets/slider3.jpg',
@@ -35,24 +35,25 @@ export class NewsDetailComponent implements OnInit {
     },
     {
       id: 2,
-      title: 'Signing of Cooperation Agreement with a German University',
-      summary: 'Luxor University signed a cooperation agreement with the Technical University of Munich in Germany to enhance student and academic exchange between the two universities.',
+      title: 'توقيع اتفاقية تعاون مع جامعة ألمانية',
+      summary: 'وقّعت جامعة الأقصر اتفاقية تعاون مع الجامعة التقنية في ميونخ بألمانيا لتعزيز التبادل الطلابي والأكاديمي بين الجامعتين.',
       content: [
-        'Luxor University signed a cooperation agreement with the Technical University of Munich in Germany to enhance student and academic exchange between the two universities.',
-        'The agreement includes joint research projects and faculty exchange programs.',
-        'This partnership aims to strengthen academic ties and promote innovation.'
+        'وقّعت جامعة الأقصر اتفاقية تعاون مع الجامعة التقنية في ميونخ بألمانيا لتعزيز التبادل الطلابي والأكاديمي بين الجامعتين.',
+        'تشمل الاتفاقية مشروعات بحثية مشتركة وبرامج تبادل بين أعضاء هيئة التدريس.',
+        'يهدف هذا التعاون إلى تعزيز الروابط الأكاديمية ودعم الابتكار.'
       ],
       date: new Date('2024-08-10T10:00:00'),
-      category: 'International Cooperation',
-      author: 'University Administration',
-      readTime: '4 minutes',
+      category: 'التعاون الدولي',
+      author: 'إدارة الجامعة',
+      readTime: '4 دقائق',
       images: [
         'assets/slider3.jpg',
         'assets/slider2.jpg'
       ]
     }
-    // Add more news items as needed
-  ];
+ ];
+
+  
 
   constructor(private route: ActivatedRoute) {}
 

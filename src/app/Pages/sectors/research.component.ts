@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-research',
   standalone: true,
   template: `
-    <h2>Graduate Studies and Research Sector</h2>
-    <p>Content for Graduate Studies and Research Sector.</p>
+    <h2>قطاع الدراسات العليا والبحث</h2>
+    <p>محتوى لقطاع الدراسات العليا والبحث.</p>
   `,
   styles: [`
     h2 {

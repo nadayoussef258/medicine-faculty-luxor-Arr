@@ -13,6 +13,7 @@ export interface MenuTab {
   fragment?: string;
   icon?: string;
   isActive?: boolean;
+  type?: "menu" | "columns";
 }
 
 @Component({
@@ -26,37 +27,42 @@ export class MedicineMenuBarComponent {
   @Input() menuTabs: MenuTab[] = [
     {
       id: '1',
-      title: 'Home',
+      title: 'الرئيسية',
       target: '',
       order: 1,
       menuTypeId: 'main',
     },
      {
     id: '2',
-    title: 'About the College',
+    title: 'عن الكلية',
     target: '/about-college',
     order: 2,
     menuTypeId: 'main',
+    type: "columns",
     childs: [
       {
-        title: 'Overview',
+        title: 'نبذة عن الكلية',
         target: '/overview',
         order: 1,
         menuTypeId: 'sub',
+    type: "menu",
+
         childs: [
-                    { title: 'Dean’s Word', target: '/dean-word', order: 1, menuTypeId: 'subsub' },
-          { title: 'History', target: '/history', order: 2, menuTypeId: 'subsub' },
-          { title: 'Objectives', target: '/objectives', order: 3, menuTypeId: 'subsub' },
-          { title: 'Vision & Mission', target: '/vision-mission', order: 4, menuTypeId: 'subsub' }
+                    { title: 'كلمة العميد', target: '/dean-word', order: 1, menuTypeId: 'subsub' },
+          { title: 'نشأة الكلية', target: '/history', order: 2, menuTypeId: 'subsub' },
+          { title: 'الأهداف', target: '/objectives', order: 3, menuTypeId: 'subsub' },
+          { title: 'الرؤية & الرسالة', target: '/vision-mission', order: 4, menuTypeId: 'subsub' }
         ]
       },
       {
-        title: 'Management',
+        title: 'الإدارة',
         target: '/management',
         order: 2,
         menuTypeId: 'sub',
+    type: "menu",
+
         childs: [
-          { title: 'Organizational structure', target: '/structure', order: 1, menuTypeId: 'subsub' },
+          { title: 'الهيكل التنظيمي', target: '/structure', order: 1, menuTypeId: 'subsub' },
           // { title: 'Vice Dean (Education)', target: '/vice-dean-education', order: 2, menuTypeId: 'subsub' },
           // { title: 'Vice Dean (Research)', target: '/vice-dean-research', order: 3, menuTypeId: 'subsub' },
           // { title: 'Vice Dean (Community)', target: '/vice-dean-community', order: 4, menuTypeId: 'subsub' },
@@ -67,75 +73,96 @@ export class MedicineMenuBarComponent {
   },
     {
       id: '3',
-      title: 'Sectors',
+      title: 'القطاعات',
       target: '/sector',
       order: 3,
       menuTypeId: 'main',
+    type: "menu",
+
       childs: [
-        { id: '1', title: 'Education and Students Affairs Sector', target: '/sector/1', order: 1, menuTypeId: 'sub' },
-        { id: '2', title: 'Graduate Studies and Research Sector', target: '/sector/2', order: 2, menuTypeId: 'sub' },
-        { id: '3', title: 'Community Service and Environmental Affairs Sector', target: '/sector/3', order: 3, menuTypeId: 'sub' }
+        { id: '1', title: 'شئون التعليم والطلاب', target: '/sector/1', order: 1, menuTypeId: 'sub' },
+        { id: '2', title: 'الدراسات العليا والبحوث', target: '/sector/2', order: 2, menuTypeId: 'sub' },
+        { id: '3', title: 'خدمة المجتمع وتنمية البيئة', target: '/sector/3', order: 3, menuTypeId: 'sub' }
       ]
     },
     {
       id: '4',
-      title: 'Scientific Departments',
+      title: 'الأقسام العلمية',
       target: '/departments',
       order: 4,
       menuTypeId: 'main',
+    type: "columns",
+
       childs: [
         {
-          title: 'Academic Departments',
+          title: 'أقسام أكاديمية',
           target: '/academic-departments',
           order: 1,
           menuTypeId: 'sub',
           childs: [
-            { title: 'Anatomy', target: '/anatomy', order: 1, menuTypeId: 'subsub' },
-            { title: 'Physiology', target: '/physiology', order: 2, menuTypeId: 'subsub' },
-            { title: 'Biochemistry', target: '/biochemistry', order: 3, menuTypeId: 'subsub' },
-            { title: 'Pathology', target: '/pathology', order: 4, menuTypeId: 'subsub' },
-            { title: 'Pharmacology', target: '/pharmacology', order: 5, menuTypeId: 'subsub' }
+            { title: 'تشرريح', target: '/anatomy', order: 1, menuTypeId: 'subsub' },
+            { title: 'فسيولوجي', target: '/physiology', order: 2, menuTypeId: 'subsub' },
+            { title: 'كيمياء حيوية', target: '/biochemistry', order: 3, menuTypeId: 'subsub' },
+            { title: 'باثولوجي', target: '/pathology', order: 4, menuTypeId: 'subsub' },
+            { title: 'أدوية', target: '/pharmacology', order: 5, menuTypeId: 'subsub' }
           ]
         },
         {
-          title: 'Clinical Departments',
+          title: 'أقسام إكلينيكية',
           target: '/clinical-departments',
           order: 2,
           menuTypeId: 'sub',
           childs: [
-            { title: 'Internal Medicine', target: '/internal-medicine', order: 1, menuTypeId: 'subsub' },
-            { title: 'Surgery', target: '/surgery', order: 2, menuTypeId: 'subsub' },
-            { title: 'Pediatrics', target: '/pediatrics', order: 3, menuTypeId: 'subsub' },
-            { title: 'Obstetrics and Gynecology', target: '/obgyn', order: 4, menuTypeId: 'subsub' },
-            { title: 'Radiology', target: '/radiology', order: 5, menuTypeId: 'subsub' }
+            { title: 'جرراحة', target: '/surgery', order: 2, menuTypeId: 'subsub' },
+            { title: 'تحاليل', target: '/pediatrics', order: 3, menuTypeId: 'subsub' },
+            { title: 'أشعة', target: '/radiology', order: 5, menuTypeId: 'subsub' }
           ]
         }
       ]
     },
     {
       id: '5',
-      title: 'Centers and Units',
+      title: 'المراكز والوحدات',
       target: '/centers-units',
       order: 5,
-      menuTypeId: 'main'
+      menuTypeId: 'main',
+    type: "columns",
+
+      childs: [
+        { title: 'المراكز', target: '/centers', order: 1, menuTypeId: 'sub', childs: [
+            { title: 'Anatomy', target: '/anatomy', order: 1, menuTypeId: 'subsub' },
+            { title: 'Physiology', target: '/physiology', order: 2, menuTypeId: 'subsub' },
+            { title: 'Biochemistry', target: '/biochemistry', order: 3, menuTypeId: 'subsub' },
+            { title: 'Pathology', target: '/pathology', order: 4, menuTypeId: 'subsub' },
+            { title: 'Pharmacology', target: '/pharmacology', order: 5, menuTypeId: 'subsub' }
+          ] },
+        { title: 'الوحدات', target: '/units', order: 2, menuTypeId: 'sub', childs: [
+            { title: 'Anatomy', target: '/anatomy', order: 1, menuTypeId: 'subsub' },
+            { title: 'Physiology', target: '/physiology', order: 2, menuTypeId: 'subsub' },
+            { title: 'Biochemistry', target: '/biochemistry', order: 3, menuTypeId: 'subsub' },
+            { title: 'Pathology', target: '/pathology', order: 4, menuTypeId: 'subsub' },
+            { title: 'Pharmacology', target: '/pharmacology', order: 5, menuTypeId: 'subsub' }
+          ] }
+      ]
     },
     {
       id: '6',
-      title: 'College Journal',
+      title: 'مجلة الكلية',
       target: '/journal',
       order: 6,
       menuTypeId: 'main'
+
     },
     {
       id: '7',
-      title: 'Staff Members',
+      title: 'أعضاء هيئة التدريس',
       target: '/staff-members',
       order: 7,
       menuTypeId: 'main'
     },
     {
       id: '8',
-      title: 'News',
+      title: 'أخبار',
       target: '/news',
       order: 8,
       menuTypeId: 'main'

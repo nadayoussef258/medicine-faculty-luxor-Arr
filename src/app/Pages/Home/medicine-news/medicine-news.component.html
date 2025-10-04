@@ -31,7 +31,7 @@
             
             <div class="card-content">
               <div class="author-info">
-                <span class="author">By {{ item.author }}</span> / <span class="specialty">{{ item.specialty }}</span>
+                <span class="author">بواسطة {{ item.author }}</span> / <span class="specialty">{{ item.specialty }}</span>
               </div>
               <h3 class="card-title">{{ item.title }}</h3>
               <p class="card-excerpt">{{ item.excerpt }}</p>
@@ -39,7 +39,7 @@
                  class="read-more" 
                  *ngIf="item.readMoreUrl"
                  (click)="onReadMoreClick($event)">
-                Continue Reading <i class="fas fa-arrow-left" [class.fa-arrow-right]="!isRTL"></i>
+                تفاصيل الخبر <i class="fas fa-arrow-left" [class.fa-arrow-right]="!isRTL"></i>
               </a>
             </div>
           </article>

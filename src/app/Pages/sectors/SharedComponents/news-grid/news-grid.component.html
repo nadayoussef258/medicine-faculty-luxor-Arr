@@ -21,7 +21,9 @@
           <h3 class="card-title">{{ news.title }}</h3>
           <p class="card-excerpt">{{ news.summary }}</p>
           <a class="read-more" (click)="$event.stopPropagation(); goToNewsDetail(news.id)" tabindex="0">
-            Details<i class="fas fa-arrow-left"></i>
+         
+            تفاصيل الخبر
+               <i class="fas fa-arrow-left"></i>
           </a>
         </div>
       </article>

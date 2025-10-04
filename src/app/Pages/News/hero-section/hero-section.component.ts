@@ -10,11 +10,12 @@ import { CommonModule } from '@angular/common';
 })
 export class NewsHeroSectionComponent {
   heroData = {
-    title: 'Faculty of Medicine News',
-    subtitle: 'Stay updated with the latest news and developments at the Faculty of Medicine',
+    title: 'أخبار كلية الطب',
+    subtitle: 'تابع أحدث الأخبار والتطورات في كلية الطب',
     backgroundImage: 'assets/slider1.png',
-    searchPlaceholder: 'Search for a specific news...'
+    searchPlaceholder: 'ابحث عن خبر محدد...'
   };
+
 }
 
 

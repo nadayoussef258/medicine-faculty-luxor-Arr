@@ -78,6 +78,8 @@
       background: #fff8e1a9;
       padding-top: 30px;
       color: var(--footer-text);
+       direction:rtl;
+
     }
 
     .footer-main-content {
@@ -110,7 +112,7 @@
     }
 
     .widget-title {
-      font-family: 'Poppins', sans-serif;
+      /* font-family: 'Poppins', sans-serif; */
       font-size: 24px;
       font-weight: 600;
       color: var(--footer-widget-title);
@@ -140,10 +142,11 @@
     }
 
     .widget-content p {
-      font-family: 'Poppins', sans-serif;
-      font-size: 14px;
+      /* font-family: 'Poppins', sans-serif; */
+      font-size: 19px;
       color: var(--footer-text);
       line-height: 1.6;
+      font-weight: 600;
       margin-bottom: 20px;
     }
 
@@ -158,7 +161,7 @@
 
     .uni-info-contact ul li {
       font-family: 'Poppins', sans-serif;
-      font-size: 14px;
+      font-size: 16px;
       color: var(--footer-contact-text);
       line-height: 2.14;
       display: flex;
@@ -193,7 +196,7 @@
     .uni-quick-link ul li a {
       display: block;
       font-family: 'Poppins', sans-serif;
-      font-size: 14px;
+      font-size: 16px;
       color: var(--footer-link-color);
       line-height: 3;
       text-transform: capitalize;
@@ -241,7 +244,7 @@
     .uni-footer-latest-post ul li h4 a {
       display: block;
       font-family: 'Poppins', sans-serif;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 600;
       color: var(--footer-link-color);
       text-transform: uppercase;

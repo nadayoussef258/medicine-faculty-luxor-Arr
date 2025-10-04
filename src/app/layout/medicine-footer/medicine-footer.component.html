@@ -35,12 +35,12 @@
             <!-- Quick Links Column -->
             <div class="footer-main-content-element">
               <aside class="widget">
-                <h3 class="widget-title uni-uppercase">quick links</h3>
+                <h3 class="widget-title uni-uppercase">روابط سريعة</h3>
                 <div class="widget-content">
                   <div class="uni-quick-link">
                     <ul>
                       <li *ngFor="let link of quickLinks; trackBy: trackByFn">
-                        <a href="#" [attr.href]="link.url" (click)="onLinkClick('quicklink', link)">
+                        <a [routerLink]="link.url" (click)="onLinkClick('quicklink', link)">
                           <span>{{ link.icon }}</span> {{ link.text }}
                         </a>
                       </li>
@@ -53,13 +53,13 @@
             <!-- Latest Posts Column -->
             <div class="footer-main-content-element">
               <aside class="widget">
-                <h3 class="widget-title uni-uppercase">latest posts</h3>
+                <h3 class="widget-title uni-uppercase">آخر الأخبار</h3>
                 <div class="widget-content">
                   <div class="uni-footer-latest-post">
                     <ul>
                       <li *ngFor="let post of latestPosts; trackBy: trackByFn">
                         <h4>
-                          <a href="#" [attr.href]="post.url" (click)="onLinkClick('post', post)">
+                          <a [routerLink]="post.url" (click)="onLinkClick('post', post)">
                             {{ post.title }}
                           </a>
                         </h4>

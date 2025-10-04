@@ -21,10 +21,10 @@
 
   <!-- Controls -->
   <div class="hero-controls" *ngIf="isHovered && slides.length > 1">
-    <button class="control-btn prev-btn" (click)="prevSlide()" aria-label="Previous slide">
+    <button class="control-btn prev-btn" (click)="prevSlide()" aria-label="الشريحة السابقة">
       <i class="fas fa-chevron-left"></i>
     </button>
-    <button class="control-btn next-btn" (click)="nextSlide()" aria-label="Next slide">
+    <button class="control-btn next-btn" (click)="nextSlide()" aria-label="الشريحة التالية">
       <i class="fas fa-chevron-right"></i>
     </button>
   </div>
@@ -35,7 +35,7 @@
             class="indicator"
             [class.active]="i === currentSlideIndex"
             (click)="goToSlide(i)"
-            [attr.aria-label]="'Go to slide ' + (i + 1)">
+            [attr.aria-label]="'الذهاب إلى الشريحة ' + (i + 1)">
     </button>
   </div>
 </div>

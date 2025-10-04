@@ -50,83 +50,84 @@ export class StaffGridComponent {
 
   // Staff members data (example, translated)
   staffData = [
-    {
-      id: 1,
-      name: 'Dr. Ahmed Mohamed Ali',
-      academicRank: 'Professor',
-      college: 'Faculty of Medicine',
-      department: 'Surgery Department',
-      email: 'ahmed.mohamed@medicine.luxor.edu.eg',
-      phone: '+20 123 456 7890',
-      researchInterests: 'General Surgery, Laparoscopic Surgery, Oncology',
-      personalPage: 'https://luxor.edu.eg/staff/ahmed-mohamed',
-      cvLink: 'https://luxor.edu.eg/cv/ahmed-mohamed.pdf',
-      profileImage: 'assets/event1.jpg'
-    },
-    {
-      id: 2,
-      name: 'Dr. Fatima Hassan Abdullah',
-      academicRank: 'Associate Professor',
-      college: 'Faculty of Medicine',
-      department: 'Internal Medicine Department',
-      email: 'fatima.hassan@medicine.luxor.edu.eg',
-      phone: '+20 123 456 7891',
-      researchInterests: 'Internal Medicine, Cardiology, Hypertension',
-      personalPage: 'https://luxor.edu.eg/staff/fatima-hassan',
-      cvLink: 'https://luxor.edu.eg/cv/fatima-hassan.pdf',
-      profileImage: 'assets/event1.jpg'
-    },
-    {
-      id: 3,
-      name: 'Dr. Mohamed Ahmed Salem',
-      academicRank: 'Lecturer',
-      college: 'Faculty of Medicine',
-      department: 'Pediatrics Department',
-      email: 'mohamed.ahmed@medicine.luxor.edu.eg',
-      phone: '+20 123 456 7892',
-      researchInterests: 'Pediatrics, Neonatology, Child Development',
-      personalPage: 'https://luxor.edu.eg/staff/mohamed-ahmed',
-      cvLink: 'https://luxor.edu.eg/cv/mohamed-ahmed.pdf',
-      profileImage: 'assets/event2.jpg'
-    },
-    {
-      id: 4,
-      name: 'Dr. Sara Mahmoud Ibrahim',
-      academicRank: 'Professor',
-      college: 'Faculty of Medicine',
-      department: 'Gynecology and Obstetrics Department',
-      email: 'sara.mahmoud@medicine.luxor.edu.eg',
-      phone: '+20 123 456 7893',
-      researchInterests: 'Gynecology, Obstetrics, Reproductive Health',
-      personalPage: 'https://luxor.edu.eg/staff/sara-mahmoud',
-      cvLink: 'https://luxor.edu.eg/cv/sara-mahmoud.pdf',
-      profileImage: 'assets/event3.jpg'
-    },
-    {
-      id: 5,
-      name: 'Dr. Ali Hassan Mohamed',
-      academicRank: 'Associate Professor',
-      college: 'Faculty of Medicine',
-      department: 'Radiology Department',
-      email: 'ali.hassan@medicine.luxor.edu.eg',
-      phone: '+20 123 456 7894',
-      researchInterests: 'Radiology, Diagnostic Imaging, MRI Techniques',
-      personalPage: 'https://luxor.edu.eg/staff/ali-hassan',
-      cvLink: 'https://luxor.edu.eg/cv/ali-hassan.pdf',
-      profileImage: 'assets/event2.jpg'
-    },
-    {
-      id: 6,
-      name: 'Dr. Layla Ahmed Mahmoud',
-      academicRank: 'Lecturer',
-      college: 'Faculty of Medicine',
-      department: 'Pathology Department',
-      email: 'layla.ahmed@medicine.luxor.edu.eg',
-      phone: '+20 123 456 7895',
-      researchInterests: 'Pathology, Histopathology, Molecular Pathology',
-      personalPage: 'https://luxor.edu.eg/staff/layla-ahmed',
-      cvLink: 'https://luxor.edu.eg/cv/layla-ahmed.pdf',
-      profileImage: 'assets/event3.jpg'
-    }
-  ];
+  {
+    id: 1,
+    name: 'د. أحمد محمد علي',
+    academicRank: 'أستاذ',
+    college: 'كلية الطب',
+    department: 'قسم الجراحة',
+    email: 'ahmed.mohamed@medicine.luxor.edu.eg',
+    phone: '+20 123 456 7890',
+    researchInterests: 'الجراحة العامة، الجراحة بالمنظار، الأورام',
+    personalPage: 'https://luxor.edu.eg/staff/ahmed-mohamed',
+    cvLink: 'https://luxor.edu.eg/cv/ahmed-mohamed.pdf',
+    profileImage: 'assets/event1.jpg'
+  },
+  {
+    id: 2,
+    name: 'د. فاطمة حسن عبد الله',
+    academicRank: 'أستاذ مساعد',
+    college: 'كلية الطب',
+    department: 'قسم الباطنة',
+    email: 'fatima.hassan@medicine.luxor.edu.eg',
+    phone: '+20 123 456 7891',
+    researchInterests: 'الباطنة، أمراض القلب، ارتفاع ضغط الدم',
+    personalPage: 'https://luxor.edu.eg/staff/fatima-hassan',
+    cvLink: 'https://luxor.edu.eg/cv/fatima-hassan.pdf',
+    profileImage: 'assets/event1.jpg'
+  },
+  {
+    id: 3,
+    name: 'د. محمد أحمد سالم',
+    academicRank: 'مدرس',
+    college: 'كلية الطب',
+    department: 'قسم طب الأطفال',
+    email: 'mohamed.ahmed@medicine.luxor.edu.eg',
+    phone: '+20 123 456 7892',
+    researchInterests: 'طب الأطفال، حديثي الولادة، نمو الطفل',
+    personalPage: 'https://luxor.edu.eg/staff/mohamed-ahmed',
+    cvLink: 'https://luxor.edu.eg/cv/mohamed-ahmed.pdf',
+    profileImage: 'assets/event2.jpg'
+  },
+  {
+    id: 4,
+    name: 'د. سارة محمود إبراهيم',
+    academicRank: 'أستاذ',
+    college: 'كلية الطب',
+    department: 'قسم النساء والتوليد',
+    email: 'sara.mahmoud@medicine.luxor.edu.eg',
+    phone: '+20 123 456 7893',
+    researchInterests: 'أمراض النساء، التوليد، الصحة الإنجابية',
+    personalPage: 'https://luxor.edu.eg/staff/sara-mahmoud',
+    cvLink: 'https://luxor.edu.eg/cv/sara-mahmoud.pdf',
+    profileImage: 'assets/event3.jpg'
+  },
+  {
+    id: 5,
+    name: 'د. علي حسن محمد',
+    academicRank: 'أستاذ مساعد',
+    college: 'كلية الطب',
+    department: 'قسم الأشعة',
+    email: 'ali.hassan@medicine.luxor.edu.eg',
+    phone: '+20 123 456 7894',
+    researchInterests: 'الأشعة، التصوير التشخيصي، تقنيات الرنين المغناطيسي',
+    personalPage: 'https://luxor.edu.eg/staff/ali-hassan',
+    cvLink: 'https://luxor.edu.eg/cv/ali-hassan.pdf',
+    profileImage: 'assets/event2.jpg'
+  },
+  {
+    id: 6,
+    name: 'د. ليلى أحمد محمود',
+    academicRank: 'مدرس',
+    college: 'كلية الطب',
+    department: 'قسم الباثولوجيا',
+    email: 'layla.ahmed@medicine.luxor.edu.eg',
+    phone: '+20 123 456 7895',
+    researchInterests: 'الباثولوجيا، علم الأمراض النسيجي، الباثولوجيا الجزيئية',
+    personalPage: 'https://luxor.edu.eg/staff/layla-ahmed',
+    cvLink: 'https://luxor.edu.eg/cv/layla-ahmed.pdf',
+    profileImage: 'assets/event3.jpg'
+  }
+];
+
 }

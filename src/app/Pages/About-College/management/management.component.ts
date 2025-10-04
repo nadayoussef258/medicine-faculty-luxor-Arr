@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-management',
   standalone: true,
   template: `
-    <h2>Management</h2>
-    <p>Content for Management.</p>
+    <h2>الإدارة</h2>
+    <p>محتوى للإدارة.</p>
   `,
   styles: [`
     h2 {
