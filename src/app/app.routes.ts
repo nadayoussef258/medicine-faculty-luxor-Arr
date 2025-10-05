@@ -2,9 +2,6 @@ import { Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './Pages/Home/Home/Home.component';
 import { AboutCollegeComponent } from './Pages/About-College/about-college.component';
-import { OverviewComponent } from './Pages/About-College/overview/overview.component';
-import { ManagementComponent } from './Pages/About-College/management/management.component';
-import { ScientificDepartmentsComponent } from './Pages/Scientific-Departments/scientific-departments.component';
 import { AcademicDepartmentsComponent } from './Pages/Scientific-Departments/academic-departments.component';
 import { ClinicalDepartmentsComponent } from './Pages/Scientific-Departments/clinical-departments.component';
 import { CollegeJournalComponent } from './Pages/College-Journal/college-journal.component';
@@ -19,10 +16,13 @@ import { SectorNewsComponent } from './Pages/sectors/SharedComponents/News/news.
 import { SectorNewsDetailComponent } from './Pages/sectors/SharedComponents/News/news-detail/news-detail.component';
 import { SectorServicesComponent } from './Pages/sectors/SharedComponents/sector-services/sector-services.component';
 import { MedicalDeanSpeechComponent } from './Pages/Home/dean-speech/dean-speech.component';
+import { VisionMissionComponent } from './Pages/About-College/vision-mission.component';
 import { HistoryComponent } from './Pages/About-College/overview/history.component';
 import { GoalsComponent } from './Pages/goals/goals.component';
 import { OrganizationalStructureComponent } from './Pages/About-College/management/OrganizationalStructure/OrganizationalStructure.component';
-import { VisionMissionComponent } from './Pages/About-College/vision-mission.component';
+import { conferenceComponent } from './Pages/Conferences/conference.component';
+import { ConferenceDetailComponent } from './Pages/Conferences/conference-detail/conference-detail.component';
+import { DepartmentsComponent } from './Pages/Departments/departments.component';
 
 export const routes: Routes = [
     {
@@ -58,12 +58,11 @@ export const routes: Routes = [
          { path: 'sector-news/:id', component: SectorNewsDetailComponent },
          { path: 'sector-services', component: SectorServicesComponent },
          { path: '', redirectTo: 'about-sector', pathMatch: 'full' },
-
       ]
         },
         {
           path: 'departments',
-          component: ScientificDepartmentsComponent,
+          component: DepartmentsComponent,
           children: [
             { path: 'academic', component: AcademicDepartmentsComponent },
             { path: 'clinical', component: ClinicalDepartmentsComponent }
@@ -71,6 +70,9 @@ export const routes: Routes = [
         },
         // { path: 'centers-units', component: CentersUnitsComponent },
         { path: 'journal', component: CollegeJournalComponent },
+        {path:'conferences', component:conferenceComponent},
+        {path:'conference/detail/:id', component:ConferenceDetailComponent},
+
         { path: 'staff-members', component: StaffMembersComponent },
         { path: 'services', component: ServicesComponent },
         {

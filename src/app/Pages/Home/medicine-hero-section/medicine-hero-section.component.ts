@@ -42,7 +42,7 @@ slides: HeroSlideDto[] = [
 
 
   @Input() buttonText: string = 'عن الكلية';
-  @Input() buttonRoute: string = '/';
+  @Input() buttonRoute: string = '/structure';
   @Input() autoPlayInterval: number = 5000;
   @Input() showControls: boolean = true;
   @Input() showIndicators: boolean = true;
