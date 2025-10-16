@@ -8,20 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./vision-mission.component.css']
 })
 export class VisionMissionComponent {
-  visionText: string = `كلية الطب بالأقصر هي صرح أكاديمي وسريري متميز يساهم بفعالية في تطوير العلوم الطبية والممارسة محلياً ودولياً، ويحدث تأثيراً إيجابياً على صحة المجتمع من خلال تقديم الرعاية الصحية الشاملة والمتكاملة بأعلى المعايير الدولية`;
+  visionText: string = `Luxor Medicine is a distinguished academic and clinical edifice that effectively contributes to the development of medical science and practice locally and internationally, and makes a positive impact on the health of society in providing comprehensive and integrated health care at the highest international standards`;
 
   missionPoints: string[] = [
-    'بناء وتخريج طبيب بخلفية علمية صلبة ومهارات سريرية متميزة',
-    'الريادة المحلية والإقليمية والعالمية في التدريب الطبي وبيئة التعلم المبتكرة',
-    'البحث العلمي والمساهمة العلمية محلياً ودولياً',
-    'المساهمة الفعالة في تحقيق التنمية الشاملة في المجتمع وتحسين صحة المجتمع من خلال دمج وتطبيق البحث العلمي مع التدريب بالإضافة إلى المشاركة الفعالة في جميع الأمور المتعلقة بصحة المجتمع، بما في ذلك الإجراءات الوقائية والعلاجية والتشريعية.'
+    'To build and graduate a physician with a solid scientific background and outstanding clinical skills',
+    'Local, regional and global leadership in medical training and an innovative learning environment',
+    'Scientific research and scientific contribution locally and internationally',
+    'Effective contribution to achieving comprehensive development in the community and improving the health of the community in the integration and application of scientific research with training as well as effective participation in all matters related to community health, including preventive, therapeutic and legislative measures.'
   ];
 
   connectionPoints: string[] = [
-    'تساهم كلية الطب في التميز في التعليم الطبي والبحث العلمي، مما يؤدي إلى اقتصاد تنافسي مبني على الابتكار والمعرفة.',
-    'مساعدة كلية الطب من خلال رؤيتها في خدمة احتياجات المجتمع من خلال تخريج أطباء متميزين لخدمة المجتمع وتحسين الرعاية الصحية للمصريين، بالإضافة إلى توظيف البحث العلمي لحل المشكلات الطبية في المجتمع المصري، مما يؤدي إلى تحقيق التنمية المستدامة وتحسين جودة الحياة للمصريين.',
-    'تخدم كلية الطب بجامعة الأقصر شريحة كبيرة من الفقراء والطبقات الوسطى وتقدم لهم خدمات طبية متميزة، مما يساهم في تحقيق العدالة الاجتماعية وحق جميع الفئات في الحصول على خدمات طبية متميزة.'
+    'The College of Medicine contributes to excellence in medical education and scientific research, leading to a competitive economy based on innovation and knowledge.',
+    'Assisting the Faculty of Medicine through its vision of serving societal needs by graduating distinguished doctors to serve the community and improve healthcare for Egyptians, as well as harnessing scientific research to solve medical problems in Egyptian society, which leads to achieving sustainable development and improving the quality of life for Egyptians.',
+    'The Faculty of Medicine at Luxor University serves a large segment of the poor and middle classes and provides them with distinguished medical services, which contributes to achieving social justice and the right of all groups to obtain distinguished medical services.'
   ];
-About_Text: string = 'يعمل فريق خبرائنا بلا كلل لتحقيق رؤيتكم، مع ضمان أن كل مشروع ننفذه لا يقتصر على تلبية التوقعات فحسب، بل يتجاوزها. نحن ملتزمون بتحويل أفكاركم إلى تجارب رقمية مؤثرة تتناغم مع جمهوركم وتدفع نحو النجاح.';
 }
-

@@ -28,17 +28,16 @@ private apiUrl = 'api/sectors'; // Replace with actual API
     return of('Deleted (Mock)').pipe(delay(500));
   }
 
-  
   getById(id: string): Observable<AddSectorDto | undefined> {
-    // بيانات تجريبية للقطاعات
+    // English mock data for sectors
     const mockSectors: { [key: string]: AddSectorDto } = {
       '1': {
-        name: 'قطاع التعليم والطلاب',
-        subTitle: 'مسؤول عن إدارة شئون الطلاب والعملية التعليمية بالجامعة.'
+        name: 'قطاع التعليم وشؤون الطلاب',
+        subTitle: 'مسؤول عن إدارة شؤون الطلاب والعملية التعليمية بالجامعة.'
       },
       '2': {
         name: 'قطاع الدراسات العليا والبحوث',
-        subTitle: 'يشرف على برامج الماجستير والدكتوراه والمشاريع البحثية.'
+        subTitle: 'يشرف على برامج الماجستير والدكتوراه والمشروعات البحثية.'
       },
       '3': {
         name: 'قطاع خدمة المجتمع وتنمية البيئة',
@@ -46,11 +45,12 @@ private apiUrl = 'api/sectors'; // Replace with actual API
       },
       '4': {
         name: 'قطاع أمين عام الجامعة',
-        subTitle: 'مسؤول عن الشئون الإدارية والمالية بالجامعة.'
+        subTitle: 'مسؤول عن الشؤون الإدارية والمالية للجامعة.'
       }
     };
     return of(mockSectors[id]).pipe(delay(300));
   }
+
   // Sector Services
  
 
@@ -97,75 +97,87 @@ private apiUrl = 'api/sectors'; // Replace with actual API
 }
 
  
- 
-  // إحصائيات القطاعات
   getSectorStats(sectorId: string): Observable<Statistic[]> {
-    const mockStats: { [key: string]: Statistic[] } = {
-      1: [
-        { Id: 1, Title: "عدد الأقسام", Count: 12 },
-        { Id: 2, Title: "عدد الطلاب", Count: 15000 },
-        { Id: 3, Title: "عدد الموظفين", Count: 90 }
-      ],
-      2: [
-        { Id: 1, Title: "برامج الماجستير", Count: 25 },
-        { Id: 2, Title: "برامج الدكتوراه", Count: 10 },
-        { Id: 3, Title: "عدد الموظفين", Count: 90 }
-      ],
-      3: [
-        { Id: 1, Title: "مشروعات مجتمعية", Count: 40 },
-        { Id: 2, Title: "شراكات", Count: 15 },
-        { Id: 3, Title: "عدد الموظفين", Count: 90 }
-      ],
-      4: [
-        { Id: 1, Title: "عدد العاملين", Count: 500 },
-        { Id: 2, Title: "عدد الإدارات", Count: 20 },
-        { Id: 3, Title: "عدد الموظفين", Count: 90 }
-      ]
-    };
-    return of(mockStats[sectorId]);
-  }
+  const mockStats: { [key: string]: Statistic[] } = {
+    1: [
+      { Id: 1, Title: "Number of Departments", Count: 12 },
+      { Id: 2, Title: "Number of Students", Count: 15000 },
+      { Id: 3, Title: "Number of Employees", Count: 90 }
 
-  // خدمات القطاع (قائمة)
-  getAllSectorServices(): Observable<SectorServices[]> {
+    ],
+    2: [
+      { Id: 1, Title: "Master's Programs", Count: 25 },
+      { Id: 2, Title: "PhD Programs", Count: 10 },
+      { Id: 3, Title: "Number of Employees", Count: 90 }
+
+    ],
+    3: [
+      { Id: 1, Title: "Community Projects", Count: 40 },
+      { Id: 2, Title: "Partnerships", Count: 15 },
+      { Id: 3, Title: "Number of Employees", Count: 90 }
+
+    ],
+    4: [
+      { Id: 1, Title: "Number of Staff", Count: 500 },
+      { Id: 2, Title: "Number of Departments", Count: 20 },
+      { Id: 3, Title: "Number of Employees", Count: 90 }
+
+    ]
+  };
+  return of(mockStats[sectorId]);
+}
+  
+
+
+  
+
+  
+
+
+
+
+getAllSectorServices(): Observable<SectorServices[]> {
     const mockServices: SectorServices[] = [
-      {
-        id: '1',
-        name: 'استخراج شهادة قيد',
-        details: 'خدمة لاستخراج شهادات القيد للطلاب الحاليين.',
-        duration: 'يومان',
-        isOnline: true,
-        category: 'شهادات',
-        fees: 20,
-        sectorId: '1',
-        applicationUrl: '',
-        downloadUrl: '',
-        contactPerson: 'موظف شئون الطلاب',
-        contactPhone: '01000000000'
-      },
-      {
-        id: '2',
-        name: 'تقديم التظلمات',
-        details: 'خدمة تقديم التظلمات على النتائج.',
-        duration: '3 أيام',
-        isOnline: false,
-        category: 'تظلمات',
-        sectorId: '1',
-        contactPerson: 'موظف شئون الطلاب',
-        contactPhone: '01000000001'
-      }
-    ];
-    return of(mockServices).pipe(delay(300));
-  }
+    {
+      id: '1',
+      name: 'إصدار شهادة قيد',
+      details: 'خدمة لإصدار شهادات القيد للطلاب الحاليين.',
+      duration: 'يومان',
+      isOnline: true,
+      category: 'شهادات',
+      fees: 20,
+      sectorId: '1',
+      applicationUrl: '',
+      downloadUrl: '',
+      contactPerson: 'موظف شؤون الطلاب',
+      contactPhone: '01000000000'
+    },
+    {
+      id: '2',
+      name: 'تقديم طعون',
+      details: 'خدمة لتقديم الطعون على النتائج.',
+      duration: '3 أيام',
+      isOnline: false,
+      category: 'طعون',
+      sectorId: '1',
+      contactPerson: 'موظف شؤون الطلاب',
+      contactPhone: '01000000001'
+    }
+  ];
+  return of(mockServices).pipe(delay(300));
+}
 
 
 
 getSectorNews(sectorId: string): Observable<News[]> {
-    const mockNews: News[] = [
-      { id: 1, title: 'بدء التقديم للعام الجديد', summary: 'تم فتح باب التقديم للعام الجامعي الجديد.', image: 'assets/slider2.jpg', date: '2024-08-13', category: 'أكاديمي', readTime: '3 دقائق', author: 'إدارة الجامعة' },
-      { id: 2, title: 'نتائج الامتحانات', summary: 'إعلان نتائج امتحانات الفصل الدراسي الثاني.', image: 'assets/slider3.jpg', date: '2024-08-10', category: 'إعلانات', readTime: 'دقيقتان', author: 'إدارة الجامعة' }
-    ];
-    return of(sectorId === '1' ? mockNews : []).pipe(delay(200));
-  }
+  const mockNews: News[] = [
+   { id: 1, title: 'بدء التقديم للعام الجديد', summary: 'تم فتح باب التقديم للعام الدراسي الجديد.', image: 'assets/slider2.jpg', date: '2024-08-13', category: 'أكاديمي', readTime: '3 دقائق',    author: 'إدارة الجامعة'
+ },
+   { id: 2, title: 'نتائج الامتحانات', summary: 'إعلان نتائج امتحانات الفصل الدراسي الثاني.', image: 'assets/slider3.jpg', date: '2024-08-10', category: 'إعلانات', readTime: '2 دقائق',    author: 'إدارة الجامعة'
+ }
+  ];
+  return of(sectorId === '1' ? mockNews : []).pipe(delay(200));
+}
 
 
   // CRUD methods for Hero Section
@@ -328,65 +340,67 @@ getSectorNews(sectorId: string): Observable<News[]> {
   getGoals(sectorId: string): Observable<SectorGoal[]> {
     return this.http.get<SectorGoal[]>(`${this.apiUrl}/${sectorId}/goals`);
   }
+
   private getMockSector(id: string): Sector {
     switch (id) {
       case '1':
         return {
           Id: '1',
-          Name: 'قطاع التعليم وشئون الطلاب',
-          AboutSector: {
-            Id: 1,
-            Title: 'عن القطاع',
-            About: 'يُعد قطاع التعليم وشئون الطلاب من أهم القطاعات في كلية الطب، حيث يركز على تطوير العملية التعليمية وتحسين مستوى الخدمات المقدمة للطلاب. يعمل القطاع على تحقيق التميز الأكاديمي من خلال برامج تعليمية متقدمة تواكب أحدث المعايير العالمية في التعليم الطبي.',
-            SectorId: '1'
-          },
-          SectorImages: [
-            {
-              Id: 1,
-              Field: 'MainImage',
-              UrlPath: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800',
-              SectorId: '1'
-            }
-          ],
-          Statistics: [
-            { Id: 1, Title: 'عدد الطلاب', Count: 2500, SectorId: '1' },
-            { Id: 2, Title: 'أعضاء هيئة التدريس', Count: 180, SectorId: '1' },
-            { Id: 3, Title: 'البرامج الأكاديمية', Count: 12, SectorId: '1' },
-          ],
-          Director: {
-            Id: 1,
-            Name: 'الأستاذ/ عادل عامر محمد',
-            Title: 'مدير قطاع التعليم وشئون الطلاب',
-            Message: 'يسعدني أن أرحب بكم في قطاع التعليم وشئون الطلاب بكلية الطب. نحن نعمل جاهدين على توفير بيئة تعليمية متميزة تساعد طلابنا على تحقيق أهدافهم الأكاديمية والمهنية. نحن نؤمن بأهمية التطوير المستمر والابتكار في العملية التعليمية لإعداد أطباء متميزين قادرين على خدمة المجتمع.',
-            ImageUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400',
-            SectorId: '1'
-          },
-          Vision: {
-            Id: 1,
-            Vision: 'أن يكون القطاع رائدًا في التعليم الطبي على المستويين الإقليمي والدولي، والمساهمة في تخريج أطباء متميزين قادرين على خدمة المجتمع وتطوير النظام الصحي.',
-            SectorId: '1'
-          },
-          Mission: {
-            Id: 1,
-            Mission: 'تقديم تعليم طبي عالي الجودة قائم على أحدث المعايير العالمية، وتوفير بيئة داعمة للطلاب، وتنمية قدراتهم العلمية والعملية والإنسانية لإعداد كوادر طبية متميزة.',
-            SectorId: '1'
-          },
-          Goals: [
-            { Id: 1, Goal: 'تطوير البرامج الأكاديمية بما يتوافق مع المعايير الدولية للتعليم الطبي', OrderIndex: 1, SectorId: '1' },
-            { Id: 2, Goal: 'تحسين جودة التدريس والتدريب الإكلينيكي باستخدام أحدث الطرق التعليمية', OrderIndex: 2, SectorId: '1' },
-            { Id: 3, Goal: 'دعم الطلاب أكاديميًا ونفسيًا واجتماعيًا لضمان تفوقهم العلمي', OrderIndex: 3, SectorId: '1' },
-            { Id: 4, Goal: 'تعزيز البحث العلمي والابتكار في مختلف المجالات الطبية', OrderIndex: 4, SectorId: '1' },
-            { Id: 5, Goal: 'بناء شراكات محلية ودولية مع مؤسسات تعليمية وصحية مرموقة', OrderIndex: 5, SectorId: '1' }
-          ]
+          Name: 'Education and Student Affairs Sector',
+      AboutSector: {
+        Id: 1,
+        Title: 'About the Sector',
+        About: 'The Education and Student Affairs Sector is one of the most important sectors in the Faculty of Medicine, as it focuses on developing the educational process and improving the level of services provided to students. The sector works to achieve academic excellence through advanced educational programs that keep pace with the latest global standards in medical education.',
+        SectorId: '1'
+      },
+      SectorImages: [
+        {
+          Id: 1,
+          Field: 'MainImage',
+          UrlPath: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800',
+          SectorId: '1'
+        }
+      ],
+      Statistics: [
+        { Id: 1, Title: 'Number of Students', Count: 2500, SectorId: '1' },
+        { Id: 2, Title: 'Faculty Members', Count: 180, SectorId: '1' },
+        { Id: 3, Title: 'Academic Programs', Count: 12, SectorId: '1' },
+       
+      ],
+      Director: {
+        Id: 1,
+        Name: 'Mr. Adel Amer Mohammed',
+        Title: 'Director of Education and Student Affairs Sector',
+        Message: 'I am pleased to welcome you to the Education and Student Affairs Sector at the Faculty of Medicine. We work diligently to provide an excellent educational environment that helps our students achieve their academic and professional goals. We believe in the importance of continuous development and innovation in the educational process to prepare distinguished doctors capable of serving the community.',
+        ImageUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400',
+        SectorId: '1'
+      },
+      Vision: {
+        Id: 1,
+        Vision: 'To be a leading sector in medical education at the regional and international levels, and to contribute to graduating distinguished doctors capable of serving the community and developing the health system.',
+        SectorId: '1'
+      },
+      Mission: {
+        Id: 1,
+        Mission: 'Providing high-quality medical education based on the latest global standards, providing a supportive environment for students, and developing their scientific, practical, and human capabilities to prepare distinguished medical cadres.',
+        SectorId: '1'
+      },
+      Goals: [
+        { Id: 1, Goal: 'Developing academic programs in line with international standards for medical education', OrderIndex: 1, SectorId: '1' },
+        { Id: 2, Goal: 'Improving the quality of teaching and clinical training through the use of the latest educational methods', OrderIndex: 2, SectorId: '1' },
+        { Id: 3, Goal: 'Supporting students academically, psychologically, and socially to ensure their scientific excellence', OrderIndex: 3, SectorId: '1' },
+        { Id: 4, Goal: 'Enhancing scientific research and innovation in various medical fields', OrderIndex: 4, SectorId: '1' },
+        { Id: 5, Goal: 'Building local and international partnerships with reputable educational and health institutions', OrderIndex: 5, SectorId: '1' }
+      ]
         };
       case '2':
         return {
           Id: '2',
-          Name: 'قطاع الدراسات العليا والبحوث',
+          Name: 'Postgraduate Studies and Research Sector',
           AboutSector: {
             Id: 2,
-            Title: 'عن القطاع',
-            About: 'يشرف قطاع الدراسات العليا والبحوث على برامج الماجستير والدكتوراه والمشروعات البحثية في كلية الطب. ويعمل على تعزيز البحث العلمي وتوفير فرص تدريب متقدمة لطلاب الدراسات العليا للإسهام في تطوير المعرفة والابتكار الطبي.',
+            Title: 'About the Sector',
+            About: 'The Postgraduate Studies and Research Sector oversees master\'s and doctoral programs and research projects at the Faculty of Medicine. It promotes scientific research and provides advanced training opportunities for postgraduate students to contribute to medical knowledge and innovation.',
             SectorId: '2'
           },
           SectorImages: [
@@ -398,45 +412,45 @@ getSectorNews(sectorId: string): Observable<News[]> {
             }
           ],
           Statistics: [
-            { Id: 5, Title: 'برامج الماجستير', Count: 25, SectorId: '2' },
-            { Id: 6, Title: 'برامج الدكتوراه', Count: 10, SectorId: '2' },
-            { Id: 7, Title: 'المشروعات البحثية', Count: 150, SectorId: '2' },
-            { Id: 8, Title: 'الأبحاث المنشورة', Count: 300, SectorId: '2' }
+            { Id: 5, Title: 'Master\'s Programs', Count: 25, SectorId: '2' },
+            { Id: 6, Title: 'PhD Programs', Count: 10, SectorId: '2' },
+            { Id: 7, Title: 'Research Projects', Count: 150, SectorId: '2' },
+            { Id: 8, Title: 'Publications', Count: 300, SectorId: '2' }
           ],
           Director: {
             Id: 2,
-            Name: 'د. فاطمة حسن الزهراء',
-            Title: 'مدير قطاع الدراسات العليا والبحوث',
-            Message: 'مرحبًا بكم في قطاع الدراسات العليا والبحوث. نحن ملتزمون بدعم ثقافة التميز البحثي وتزويد طلاب الدراسات العليا بالأدوات والموارد اللازمة لتطوير العلوم الطبية وتحسين نتائج الرعاية الصحية.',
+            Name: 'Dr. Fatima Hassan Al-Zahra',
+            Title: 'Director of Postgraduate Studies and Research Sector',
+            Message: 'Welcome to the Postgraduate Studies and Research Sector. We are committed to fostering a culture of research excellence and providing our postgraduate students with the tools and resources needed to advance medical science and improve healthcare outcomes.',
             ImageUrl: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400',
             SectorId: '2'
           },
           Vision: {
             Id: 2,
-            Vision: 'أن يكون مركزًا للتميز في التعليم الطبي للدراسات العليا والبحث العلمي، وإعداد باحثين مبتكرين وقادة في الرعاية الصحية.',
+            Vision: 'To be a center of excellence in postgraduate medical education and research, producing innovative researchers and leaders in healthcare.',
             SectorId: '2'
           },
           Mission: {
             Id: 2,
-            Mission: 'تقديم تعليم متكامل للدراسات العليا، ودعم الأبحاث الرائدة، والمساهمة في نشر المعرفة لتطوير الممارسة الطبية والصحة العامة.',
+            Mission: 'To provide comprehensive postgraduate education, support cutting-edge research, and facilitate the dissemination of knowledge to advance medical practice and public health.',
             SectorId: '2'
           },
           Goals: [
-            { Id: 6, Goal: 'توسيع برامج الدراسات العليا لتلبية الاحتياجات المتزايدة', OrderIndex: 1, SectorId: '2' },
-            { Id: 7, Goal: 'زيادة تمويل الأبحاث والتعاون البحثي', OrderIndex: 2, SectorId: '2' },
-            { Id: 8, Goal: 'تعزيز جودة الأبحاث ومخرجات النشر', OrderIndex: 3, SectorId: '2' },
-            { Id: 9, Goal: 'تطوير معامل ومنشآت بحثية متقدمة', OrderIndex: 4, SectorId: '2' },
-            { Id: 10, Goal: 'تشجيع المبادرات البحثية متعددة التخصصات', OrderIndex: 5, SectorId: '2' }
+            { Id: 6, Goal: 'Expanding postgraduate programs to meet growing demands', OrderIndex: 1, SectorId: '2' },
+            { Id: 7, Goal: 'Increasing research funding and collaborations', OrderIndex: 2, SectorId: '2' },
+            { Id: 8, Goal: 'Enhancing publication output and research quality', OrderIndex: 3, SectorId: '2' },
+            { Id: 9, Goal: 'Developing advanced research facilities and laboratories', OrderIndex: 4, SectorId: '2' },
+            { Id: 10, Goal: 'Promoting interdisciplinary research initiatives', OrderIndex: 5, SectorId: '2' }
           ]
         };
       case '3':
         return {
           Id: '3',
-          Name: 'قطاع خدمة المجتمع وتنمية البيئة',
+          Name: 'Community Service and Environmental Development Sector',
           AboutSector: {
             Id: 3,
-            Title: 'عن القطاع',
-            About: 'يساهم قطاع خدمة المجتمع وتنمية البيئة في خدمة المجتمع المحلي وتحقيق التنمية المستدامة. ينظم القطاع برامج توعوية، ومبادرات بيئية، وشراكات مع منظمات المجتمع لتعزيز الوعي الصحي والمسؤولية البيئية.',
+            Title: 'About the Sector',
+            About: 'The Community Service and Environmental Development Sector contributes to local community service and sustainable development. It organizes outreach programs, environmental initiatives, and partnerships with community organizations to promote health awareness and environmental responsibility.',
             SectorId: '3'
           },
           SectorImages: [
@@ -448,45 +462,45 @@ getSectorNews(sectorId: string): Observable<News[]> {
             }
           ],
           Statistics: [
-            { Id: 9, Title: 'المشروعات المجتمعية', Count: 40, SectorId: '3' },
-            { Id: 10, Title: 'الشراكات', Count: 15, SectorId: '3' },
-            { Id: 11, Title: 'المتطوعون', Count: 500, SectorId: '3' },
-            { Id: 12, Title: 'حملات التوعية', Count: 25, SectorId: '3' }
+            { Id: 9, Title: 'Community Projects', Count: 40, SectorId: '3' },
+            { Id: 10, Title: 'Partnerships', Count: 15, SectorId: '3' },
+            { Id: 11, Title: 'Volunteers', Count: 500, SectorId: '3' },
+            { Id: 12, Title: 'Awareness Campaigns', Count: 25, SectorId: '3' }
           ],
           Director: {
             Id: 3,
-            Name: 'د. أحمد محمود الراشد',
-            Title: 'مدير قطاع خدمة المجتمع وتنمية البيئة',
-            Message: 'يكرس قطاعنا جهوده لردم الفجوة بين الجامعة والمجتمع. من خلال برامجنا ومبادراتنا المختلفة، نسعى لتحقيق تأثير إيجابي على الصحة العامة والتنمية المستدامة في المجتمعات المحلية والإقليمية.',
+            Name: 'Dr. Ahmed Mahmoud Al-Rashid',
+            Title: 'Director of Community Service and Environmental Development Sector',
+            Message: 'Our sector is dedicated to bridging the gap between academia and community. Through our various programs and initiatives, we strive to make a positive impact on public health and environmental sustainability in our local and regional communities.',
             ImageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400',
             SectorId: '3'
           },
           Vision: {
             Id: 3,
-            Vision: 'أن يكون نموذجًا في المشاركة المجتمعية في التعليم الطبي، وتعزيز التنمية المستدامة وتحسين نتائج الصحة المجتمعية.',
+            Vision: 'To be a model of community engagement in medical education, promoting sustainable development and improving community health outcomes.',
             SectorId: '3'
           },
           Mission: {
             Id: 3,
-            Mission: 'الانخراط مع المجتمع من خلال التوعية الصحية، والحفاظ على البيئة، والشراكات التعاونية التي تعزز الصحة العامة وتشجع على الممارسات المستدامة.',
+            Mission: 'To engage the community through educational outreach, environmental stewardship, and collaborative partnerships that enhance public health and promote sustainable practices.',
             SectorId: '3'
           },
           Goals: [
-            { Id: 11, Goal: 'زيادة برامج التوعية الصحية والمجتمعية', OrderIndex: 1, SectorId: '3' },
-            { Id: 12, Goal: 'تطوير مبادرات بيئية مستدامة', OrderIndex: 2, SectorId: '3' },
-            { Id: 13, Goal: 'تعزيز الشراكات مع المؤسسات المحلية', OrderIndex: 3, SectorId: '3' },
-            { Id: 14, Goal: 'تشجيع التطوع والمشاركة المدنية بين الطلاب', OrderIndex: 4, SectorId: '3' },
-            { Id: 15, Goal: 'متابعة وتقييم الأثر المجتمعي لبرامجنا', OrderIndex: 5, SectorId: '3' }
+            { Id: 11, Goal: 'Increasing community outreach and health education programs', OrderIndex: 1, SectorId: '3' },
+            { Id: 12, Goal: 'Developing sustainable environmental initiatives', OrderIndex: 2, SectorId: '3' },
+            { Id: 13, Goal: 'Strengthening partnerships with local organizations', OrderIndex: 3, SectorId: '3' },
+            { Id: 14, Goal: 'Promoting volunteerism and civic engagement among students', OrderIndex: 4, SectorId: '3' },
+            { Id: 15, Goal: 'Monitoring and evaluating community impact of our programs', OrderIndex: 5, SectorId: '3' }
           ]
         };
       case '4':
         return {
           Id: '4',
-          Name: 'قطاع الأمين العام للجامعة',
+          Name: 'University Secretary General Sector',
           AboutSector: {
             Id: 4,
-            Title: 'عن القطاع',
-            About: 'قطاع الأمين العام للجامعة مسؤول عن الشؤون الإدارية والمالية للجامعة. يدير السياسات الجامعية، والشؤون القانونية، والموارد البشرية، ويضمن الالتزام بالمتطلبات التنظيمية.',
+            Title: 'About the Sector',
+            About: 'The University Secretary General Sector is responsible for the administrative and financial affairs of the university. It manages university policies, legal matters, human resources, and ensures compliance with regulatory requirements.',
             SectorId: '4'
           },
           SectorImages: [
@@ -498,44 +512,42 @@ getSectorNews(sectorId: string): Observable<News[]> {
             }
           ],
           Statistics: [
-            { Id: 13, Title: 'عدد العاملين الإداريين', Count: 500, SectorId: '4' },
-            { Id: 14, Title: 'عدد الإدارات المُدارة', Count: 20, SectorId: '4' },
-            { Id: 15, Title: 'السياسات المُنفذة', Count: 150, SectorId: '4' },
-            { Id: 16, Title: 'المراجعات والالتزام', Count: 12, SectorId: '4' }
+            { Id: 13, Title: 'Administrative Staff', Count: 500, SectorId: '4' },
+            { Id: 14, Title: 'Departments Managed', Count: 20, SectorId: '4' },
+            { Id: 15, Title: 'Policies Implemented', Count: 150, SectorId: '4' },
+            { Id: 16, Title: 'Compliance Audits', Count: 12, SectorId: '4' }
           ],
           Director: {
             Id: 4,
-            Name: 'د. سارة عبد الله الفايد',
-            Title: 'الأمين العام للجامعة',
-            Message: 'باعتبارنا العمود الفقري الإداري للجامعة، فإننا نحرص على ضمان سير العمليات بسلاسة والالتزام بجميع المعايير التنظيمية. يعمل فريقنا المتميز بلا كلل لدعم التميز الأكاديمي والحفاظ على أعلى معايير الحوكمة.',
+            Name: 'Dr. Sara Abdullah Al-Fayed',
+            Title: 'University Secretary General',
+            Message: 'As the administrative backbone of our university, we ensure smooth operations and compliance with all regulatory standards. Our dedicated team works tirelessly to support academic excellence and maintain the highest standards of governance.',
             ImageUrl: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400',
             SectorId: '4'
           },
           Vision: {
             Id: 4,
-            Vision: 'أن يكون قطاعًا إداريًا نموذجيًا يدعم التميز الأكاديمي من خلال الحوكمة الفعّالة والممارسات الإدارية المبتكرة.',
+            Vision: 'To be an exemplary administrative sector that supports academic excellence through efficient governance and innovative management practices.',
             SectorId: '4'
           },
           Mission: {
             Id: 4,
-            Mission: 'تقديم دعم إداري شامل، وضمان الالتزام التنظيمي، وتحسين عمليات الجامعة لتسهيل الأنشطة الأكاديمية والبحثية.',
+            Mission: 'To provide comprehensive administrative support, ensure regulatory compliance, and optimize university operations to facilitate academic and research activities.',
             SectorId: '4'
           },
           Goals: [
-            { Id: 16, Goal: 'تبسيط العمليات والإجراءات الإدارية', OrderIndex: 1, SectorId: '4' },
-            { Id: 17, Goal: 'ضمان الالتزام بالمعايير الوطنية والدولية', OrderIndex: 2, SectorId: '4' },
-            { Id: 18, Goal: 'تطوير برامج التدريب والتأهيل للموظفين', OrderIndex: 3, SectorId: '4' },
-            { Id: 19, Goal: 'تنفيذ مبادرات التحول الرقمي', OrderIndex: 4, SectorId: '4' },
-            { Id: 20, Goal: 'تعزيز التواصل والمشاركة مع أصحاب المصلحة', OrderIndex: 5, SectorId: '4' }
+            { Id: 16, Goal: 'Streamlining administrative processes and procedures', OrderIndex: 1, SectorId: '4' },
+            { Id: 17, Goal: 'Ensuring compliance with national and international standards', OrderIndex: 2, SectorId: '4' },
+            { Id: 18, Goal: 'Developing professional development programs for staff', OrderIndex: 3, SectorId: '4' },
+            { Id: 19, Goal: 'Implementing digital transformation initiatives', OrderIndex: 4, SectorId: '4' },
+            { Id: 20, Goal: 'Enhancing stakeholder communication and engagement', OrderIndex: 5, SectorId: '4' }
           ]
         };
       default:
-        return this.getMockSector('1');
+        return this.getMockSector('1'); // Default to sector 1
     }
   }
-
-  }
-
+}
 
 
 

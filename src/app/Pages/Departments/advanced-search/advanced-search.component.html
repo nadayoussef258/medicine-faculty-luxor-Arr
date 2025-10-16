@@ -8,10 +8,14 @@
             type="text"
             id="name"
             [(ngModel)]="searchData.name"
-            placeholder="Type the department's name..."
+            placeholder="Type the member's name..."
             class="search-input"
           />
         </div>
+      </div>
+
+      <div class="search-row">
+      
 
         <div class="search-field">
           <label for="department">Department</label>
@@ -26,15 +30,17 @@
             </option>
           </select>
         </div>
+      </div>
 
+      <div class="search-row">
         <div class="search-field">
-          <label for="academicRank">Head of Department</label>
+          <label for="academicRank">Academic Rank</label>
           <select
             id="academicRank"
-            [(ngModel)]="searchData.department"
+            [(ngModel)]="searchData.academicRank"
             class="search-select"
           >
-            <option value="">All Heads</option>
+            <option value="">All Ranks</option>
             <option *ngFor="let rank of academicRanks" [value]="rank">
               {{ rank }}
             </option>

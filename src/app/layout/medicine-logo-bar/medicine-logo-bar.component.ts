@@ -18,6 +18,7 @@ export interface ContactDto{
   email?: string;
   website?: string;
   facebook?: string;
+
 }
 
 @Component({

@@ -45,7 +45,9 @@ interface EstablishmentData {
       <div class="establishment-hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-         
+          <div class="hero-icon">
+            <i [class]="establishmentData.heroIcon"></i>
+          </div>
           <h1 class="hero-title">{{ establishmentData.pageTitle }}</h1>
           <div class="hero-underline"></div>
         </div>
@@ -141,7 +143,6 @@ interface EstablishmentData {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(135deg, #FFF8E1 0%, #FFFFFF 50%, #F5F5F5 100%);
-  direction: rtl;
 }
 
 /* ===============================================
@@ -270,7 +271,7 @@ interface EstablishmentData {
 .header-decoration {
   position: absolute;
   top: 2rem;
-  right: 2rem;
+  left: 2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -352,7 +353,7 @@ interface EstablishmentData {
   font-size: 1.2rem;
   line-height: 2;
   color: #424242;
-  text-align: right;
+  text-align: justify;
   margin: 0;
 }
 
@@ -573,7 +574,7 @@ interface EstablishmentData {
 
   .establishment-text {
     font-size: 1rem;
-    text-align: right;
+    text-align: left;
   }
 
   .highlight-date,
@@ -681,20 +682,20 @@ interface EstablishmentData {
 export class HistoryComponent {
   PrimeIcons = PrimeIcons;
   establishmentData: EstablishmentData = {
-    pageTitle: 'نشأة كلية الطب',
+    pageTitle: 'The Establishment of the Faculty of Medicine',
     heroIcon: 'pi pi-building',
     mainCard: {
       headerIcon: '',
       firstSection: {
         icon: 'pi pi-flag',
-        text: 'تم تأسيس كلية الطب بالأقصر بعد صدور قرار إنشاء الكلية في',
+        text: 'The Luxor Faculty of Medicine was established following the issuance of the decision to establish the faculty on',
         highlightedDate: 'February 07, 2018',
         highlightedDateIcon: 'pi pi-calendar-plus'
       },
       secondSection: {
         icon: 'pi pi-star',
-        text: 'هي إحدى كليات جامعة الأقصر في صعيد مصر، بعد أن كانت كلياتها تعتبر فرعاً لجامعة جنوب الوادي سابقاً. تم فصل جامعة الأقصر رسمياً وأصبحت مستقلة عن جامعة جنوب الوادي بموجب',
-        highlightedDecree: 'مرسوم رئيس مجلس الوزراء رقم 1481 لسنة 2019',
+        text: 'It is one of the faculties of Luxor University in Upper Egypt, after its faculties were previously considered a branch of South Valley University. Luxor University was officially separated and became independent from South Valley University by',
+        highlightedDecree: 'Prime Ministerial Decree No. 1481 of 2019',
         highlightedDecreeIcon: 'pi pi-file'
       }
     },
@@ -706,20 +707,20 @@ export class HistoryComponent {
     sideCards: [
       {
         icon: 'pi pi-map-marker',
-        title: 'الموقع',
-        text: 'الأقصر، صعيد مصر',
+        title: 'Location',
+        text: 'Luxor, Upper Egypt',
         gradient: 'linear-gradient(135deg, #B71C1C, #C62828)'
       },
       {
         icon: 'pi pi-sitemap',
-        title: 'الجامعة الأم',
-        text: 'جامعة الأقصر',
+        title: 'Parent University',
+        text: 'Luxor University',
         gradient: 'linear-gradient(135deg, #FF8F00, #FFA000)'
       },
       {
         icon: 'pi pi-history',
-        title: 'الانتماء السابق',
-        text: 'فرع جامعة جنوب الوادي',
+        title: 'Previous Affiliation',
+        text: 'South Valley University Branch',
         gradient: 'linear-gradient(135deg, #1565C0, #1976D2)'
       }
     ]
@@ -728,17 +729,17 @@ export class HistoryComponent {
   footerStats = [
     {
       icon: 'pi pi-calendar-plus',
-      label: 'النشأة',
+      label: 'Established',
       value: this.establishmentData.footer.establishmentDate
     },
     {
       icon: 'pi pi-verified',
-      label: 'مرسوم الاستقلال',
+      label: 'Independence Decree',
       value: `No. ${this.establishmentData.footer.separationDecree}`
     },
     {
       icon: 'pi pi-star',
-      label: 'الفصل الرسمي',
+      label: 'Official Separation',
       value: this.establishmentData.footer.separationYear
     }
   ];

@@ -154,7 +154,7 @@
         content: '';
         position: absolute;
         bottom: -2px;
-        left: 50%;
+        right: 50%;
         width: 0;
         height: 2px;
         background: var(--medicine-primary-red);
@@ -282,7 +282,6 @@
   max-width: 95vw;
   position: absolute;
   top: 100%;
-  left: -30px;
   right: auto;
   z-index: 1001;
   opacity: 0;

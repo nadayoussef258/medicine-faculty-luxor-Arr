@@ -10,25 +10,22 @@
          *ngFor="let service of services; trackBy: trackByFn" 
          (click)="onServiceClick(service)">
      
-      <!-- Card Header - Split Design (Icon Left + Title Right) -->
+      <!-- Card Header - Split Design (Type Left + Category Right) -->
       <div class="card-header-split">
-        <!-- Icon Section (Left Side) -->
+        <!-- Type Section (Left Side) -->
         <div class="card-icon-section">
-          <img
-            [src]="service.iconPath"
-            [alt]="service.iconAlt"
-            class="icon-image"
-          >
+          <span class="type-text">{{ service.type }}</span>
         </div>
         
-        <!-- Title Section (Right Side) -->
+        <!-- Category Section (Right Side) -->
         <div class="card-title-section">
-          <h4 class="card-title">{{ service.title }}</h4>
+          <h4 class="card-title">{{ service.category }}</h4>
         </div>
       </div>
 
       <!-- Card Content -->
       <div class="card-content">
+        <h3 class="service-title">{{ service.title }}</h3>
         <p class="card-description">{{ service.description }}</p>
      
       </div>

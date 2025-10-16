@@ -194,6 +194,17 @@
   color: #6D4C41;
 }
 
+/* Stronger, scoped rule so department titles are visible by default
+   (prevents global .card-title rules from accidentally overriding this) */
+.departments-section .department-card .card-title {
+  color: #5D4037; /* ensure visible on light background */
+  text-transform: none; /* better for Arabic content */
+}
+
+.departments-section .department-card:hover .card-title {
+  color: #6D4C41;
+}
+
 .card-description {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
@@ -398,6 +409,33 @@
    =============================== */
 [dir="rtl"] .card-content {
   text-align: center;
+}
+
+/* RTL overrides for Arabic layout */
+[dir="rtl"] .departments-section {
+  direction: rtl;
+}
+
+[dir="rtl"] .section-title h2 {
+  text-align: center;
+}
+
+[dir="rtl"] .departments-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .card-icon {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+[dir="rtl"] .department-card {
+  text-align: right;
+}
+
+[dir="rtl"] .card-content {
+  align-items: flex-end;
 }
 
 [dir="rtl"] .card-title,

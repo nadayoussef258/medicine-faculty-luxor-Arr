@@ -28,59 +28,78 @@ export class NewsGridComponent {
       this.page = newPage;
     }
   }
- newsData = [
+  newsData = [
   {
     id: 1,
-    title: 'أخبار هامة عن القطاع',
-    summary: 'هذا ملخص للأخبار الهامة المتعلقة بالقطاع.',
-    image: 'assets/event1.jpg',
-    date: '2024-06-01',
-    category: 'أخبار عامة',
-    readTime: '٥ دقائق',
-    author: 'إدارة الجامعة'
+    title: 'Opening of the Center of Excellence in Scientific Research',
+    summary: 'The Center of Excellence in Scientific Research was inaugurated at Luxor University, aiming to promote scientific research and innovation in various scientific fields.',
+    image: 'assets/slider2.jpg',
+    date: '2024-08-13',
+    category: 'Academic News',
+    readTime: '3 minutes',
+    author: 'University Administration'
   },
   {
     id: 2,
-    title: 'تحديث جديد في القطاع',
-    summary: 'ملخص للتحديث الأخير الذي جرى في القطاع.',
-    image: 'assets/event2.jpg',
-    date: '2024-05-20',
-    category: 'تحديثات',
-    readTime: '٣ دقائق',
-    author: 'إدارة الجامعة'
+    title: 'Signing of Cooperation Agreement with a German University',
+    summary: 'Luxor University signed a cooperation agreement with the Technical University of Munich in Germany to enhance student and academic exchange between the two universities.',
+    image: 'assets/slider3.jpg',
+    date: '2024-08-10',
+    category: 'International Cooperation',
+    readTime: '4 minutes',
+    author: 'University Administration'
   },
   {
     id: 3,
-    title: 'القطاع يحقق إنجازاً جديداً',
-    summary: 'حقق القطاع إنجازاً جديداً في مشاريعه المستمرة.',
-    image: 'assets/event3.jpg',
-    date: '2024-04-15',
-    category: 'إنجازات',
-    readTime: '٤ دقائق',
-    author: 'فريق إعلام القطاع'
+    title: 'Launch of Master’s Program in Artificial Intelligence',
+    summary: 'Luxor University announced the launch of a Master’s program in Artificial Intelligence and Machine Learning to keep pace with modern technological developments.',
+    image: 'assets/slider3.jpg',
+    date: '2024-08-08',
+    category: 'Academic Programs',
+    readTime: '5 minutes',
+    author: 'University Administration'
   },
   {
     id: 4,
-    title: 'إعلان عن مؤتمر قادم',
-    summary: 'سيُعقد مؤتمر قريباً لمناقشة تطورات القطاع.',
-    image: 'assets/slider1.jpeg',
-    date: '2024-03-10',
-    category: 'فعاليات',
-    readTime: 'دقيقتان',
-    author: 'لجنة المؤتمر'
+    title: 'University Team Wins Robotics Competition',
+    summary: 'Luxor University team won first place in the regional robotics competition, reflecting excellence in engineering and technology.',
+    image: 'assets/slider2.jpg',
+    date: '2024-08-05',
+    category: 'Student Achievements',
+    readTime: '3 minutes',
+    author: 'University Administration'
   },
   {
     id: 5,
-    title: 'القطاع يتلقى تكريماً',
-    summary: 'حصل القطاع على تكريم لأدائه المتميز.',
+    title: 'International Conference on Sustainable Development',
+    summary: 'Luxor University hosted an international conference on sustainable development, with the participation of experts from various countries around the world.',
+    image: 'assets/slider3.jpg',
+    date: '2024-08-01',
+    category: 'Conferences',
+    readTime: '6 minutes',
+    author: 'University Administration'
+  },
+  {
+    id: 6,
+    title: 'University Infrastructure Development',
+    summary: 'The development of the university’s infrastructure has been completed, including the modernization of laboratories and the digital library.',
     image: 'assets/slider2.jpg',
-    date: '2024-02-28',
-    category: 'جوائز',
-    readTime: '٣ دقائق',
-    author: 'إدارة الجامعة'
+    date: '2024-07-28',
+    category: 'Infrastructure Development',
+    readTime: '4 minutes',
+    author: 'University Administration'
+  },
+  {
+    id: 7,
+    title: 'University Infrastructure Development',
+    summary: 'The development of the university’s infrastructure has been completed, including the modernization of laboratories and the digital library.',
+    image: 'assets/slider2.jpg',
+    date: '2024-07-28',
+    category: 'Infrastructure Development',
+    readTime: '4 minutes',
+    author: 'University Administration'
   }
 ];
-
 
   constructor(private router: Router) {}
 

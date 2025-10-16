@@ -1,74 +1,66 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { NewsService } from '../../../services/News.service';
+import { NewsContentComponent } from "../news-content/news-content.component";
+import { RelatedNewsComponent } from "../related-news/related-news.component";
+import { ProgressSpinner } from "primeng/progressspinner";
+import { NewsArticle, RelatedNewsItem } from '../../../Models/news';
 
 @Component({
   selector: 'app-news-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NewsContentComponent, RelatedNewsComponent, ProgressSpinner],
   templateUrl: './news-detail.component.html',
   styleUrls: ['./news-detail.component.css']
 })
 export class NewsDetailComponent implements OnInit {
-  newsData: any = null;
-  mainImage: string = '';
+ newsId: string = '';
+  newsArticle: NewsArticle | undefined;
+  relatedNews: RelatedNewsItem[] = [];
+  loading: boolean = true;
 
-  newsList = [
-    {
-      id: 1,
-      title: 'افتتاح مركز التميز في البحث العلمي',
-      summary: 'تم افتتاح مركز التميز في البحث العلمي بجامعة الأقصر، بهدف تعزيز البحث العلمي والابتكار في مختلف المجالات العلمية.',
-      content: [
-        'تم افتتاح مركز التميز في البحث العلمي بجامعة الأقصر، بهدف تعزيز البحث العلمي والابتكار في مختلف المجالات العلمية.',
-        'سيوفر المركز مرافق متقدمة ودعمًا للباحثين والطلاب.',
-        'كما سيتعاون مع مؤسسات دولية لتعزيز جودة الأبحاث.'
-      ],
-      date: new Date('2024-08-13T10:00:00'),
-      category: 'أخبار أكاديمية',
-      author: 'إدارة الجامعة',
-      readTime: '3 دقائق',
-      images: [
-        'assets/slider2.jpg',
-        'assets/slider3.jpg',
-        'assets/slider1.jpg'
-      ]
-    },
-    {
-      id: 2,
-      title: 'توقيع اتفاقية تعاون مع جامعة ألمانية',
-      summary: 'وقّعت جامعة الأقصر اتفاقية تعاون مع الجامعة التقنية في ميونخ بألمانيا لتعزيز التبادل الطلابي والأكاديمي بين الجامعتين.',
-      content: [
-        'وقّعت جامعة الأقصر اتفاقية تعاون مع الجامعة التقنية في ميونخ بألمانيا لتعزيز التبادل الطلابي والأكاديمي بين الجامعتين.',
-        'تشمل الاتفاقية مشروعات بحثية مشتركة وبرامج تبادل بين أعضاء هيئة التدريس.',
-        'يهدف هذا التعاون إلى تعزيز الروابط الأكاديمية ودعم الابتكار.'
-      ],
-      date: new Date('2024-08-10T10:00:00'),
-      category: 'التعاون الدولي',
-      author: 'إدارة الجامعة',
-      readTime: '4 دقائق',
-      images: [
-        'assets/slider3.jpg',
-        'assets/slider2.jpg'
-      ]
-    }
- ];
-
-  
-
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private newsService: NewsService
+  ) {}
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.newsData = this.newsList.find(news => news.id === id);
-    if (this.newsData && this.newsData.images && this.newsData.images.length > 0) {
-      this.mainImage = this.newsData.images[0];
-    }
+    this.route.params.subscribe(params => {
+      this.newsId = params['id'];
+      this.loadNewsDetail();
+    });
   }
 
-  setMainImage(imageUrl: string): void {
-    this.mainImage = imageUrl;
+  loadNewsDetail(): void {
+    this.loading = true;
+    
+    // جلب تفاصيل الخبر
+    this.newsService.getNewsById(this.newsId).subscribe({
+      next: (data) => {
+        this.newsArticle = data;
+        if (data) {
+          this.loadRelatedNews(data.tags);
+        }
+        this.loading = false;
+      },
+      error: (err) => {
+        console.error('Error loading news:', err);
+        this.loading = false;
+      }
+    });
   }
 
+  loadRelatedNews(tags: string[]): void {
+    this.newsService.getRelatedNews(tags, this.newsId).subscribe({
+      next: (data) => {
+        this.relatedNews = data;
+      },
+      error: (err) => {
+        console.error('Error loading related news:', err);
+      }
+    });
+  }
   goBack(): void {
     window.history.back();
   }

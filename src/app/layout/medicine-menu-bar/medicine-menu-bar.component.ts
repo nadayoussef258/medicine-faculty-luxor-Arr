@@ -32,7 +32,7 @@ export class MedicineMenuBarComponent {
       order: 1,
       menuTypeId: 'main',
     },
-     {
+  {
     id: '2',
     title: 'عن الكلية',
     target: '/about-college',
@@ -41,7 +41,7 @@ export class MedicineMenuBarComponent {
     type: "columns",
     childs: [
       {
-        title: 'نبذة عن الكلية',
+        title: 'نظرة عامة',
         target: '/overview',
         order: 1,
         menuTypeId: 'sub',
@@ -49,9 +49,9 @@ export class MedicineMenuBarComponent {
 
         childs: [
                     { title: 'كلمة العميد', target: '/dean-word', order: 1, menuTypeId: 'subsub' },
-          { title: 'نشأة الكلية', target: '/history', order: 2, menuTypeId: 'subsub' },
+          { title: 'التاريخ', target: '/history', order: 2, menuTypeId: 'subsub' },
           { title: 'الأهداف', target: '/objectives', order: 3, menuTypeId: 'subsub' },
-          { title: 'الرؤية & الرسالة', target: '/vision-mission', order: 4, menuTypeId: 'subsub' }
+          { title: 'الرؤية والرسالة', target: '/vision-mission', order: 4, menuTypeId: 'subsub' }
         ]
       },
       {
@@ -80,9 +80,9 @@ export class MedicineMenuBarComponent {
     type: "menu",
 
       childs: [
-        { id: '1', title: 'شئون التعليم والطلاب', target: '/sector/1', order: 1, menuTypeId: 'sub' },
-        { id: '2', title: 'الدراسات العليا والبحوث', target: '/sector/2', order: 2, menuTypeId: 'sub' },
-        { id: '3', title: 'خدمة المجتمع وتنمية البيئة', target: '/sector/3', order: 3, menuTypeId: 'sub' }
+        { id: '1', title: 'قطاع التعليم وشئون الطلاب', target: '/sector/1', order: 1, menuTypeId: 'sub' },
+        { id: '2', title: 'قطاع الدراسات العليا والبحث العلمي', target: '/sector/2', order: 2, menuTypeId: 'sub' },
+        { id: '3', title: 'قطاع خدمة المجتمع وشئون البيئة', target: '/sector/3', order: 3, menuTypeId: 'sub' }
       ]
     },
     {
@@ -95,27 +95,28 @@ export class MedicineMenuBarComponent {
 
       childs: [
         {
-          title: 'أقسام أكاديمية',
-          target: '/academic-departments',
+          title: 'الأقسام الأكاديمية',
+          target: '/scientific-departments/academic-departments',
           order: 1,
           menuTypeId: 'sub',
           childs: [
-            { title: 'تشرريح', target: '/anatomy', order: 1, menuTypeId: 'subsub' },
-            { title: 'فسيولوجي', target: '/physiology', order: 2, menuTypeId: 'subsub' },
-            { title: 'كيمياء حيوية', target: '/biochemistry', order: 3, menuTypeId: 'subsub' },
-            { title: 'باثولوجي', target: '/pathology', order: 4, menuTypeId: 'subsub' },
-            { title: 'أدوية', target: '/pharmacology', order: 5, menuTypeId: 'subsub' }
+            { title: 'علم التشريح', target: '/scientific-departments/1', order: 1, menuTypeId: 'subsub' },
+            { title: 'علم وظائف الأعضاء', target: '/scientific-departments/2', order: 2, menuTypeId: 'subsub' },
+            { title: 'علم الكيمياء الحيوية', target: '/scientific-departments/3', order: 3, menuTypeId: 'subsub' },
+            { title: 'علم الأمراض', target: '/scientific-departments/4', order: 4, menuTypeId: 'subsub' },
+            { title: 'علم الأدوية', target: '/scientific-departments/5', order: 5, menuTypeId: 'subsub' }
           ]
         },
         {
-          title: 'أقسام إكلينيكية',
-          target: '/clinical-departments',
+          title: 'الأقسام الإكلينيكية',
+          target: '/scientific-departments/clinical-departments',
           order: 2,
           menuTypeId: 'sub',
           childs: [
-            { title: 'جرراحة', target: '/surgery', order: 2, menuTypeId: 'subsub' },
-            { title: 'تحاليل', target: '/pediatrics', order: 3, menuTypeId: 'subsub' },
-            { title: 'أشعة', target: '/radiology', order: 5, menuTypeId: 'subsub' }
+            { title: 'الباطنة', target: '/scientific-departments/6', order: 1, menuTypeId: 'subsub' },
+            { title: 'الجراحة', target: '/scientific-departments/7', order: 2, menuTypeId: 'subsub' },
+            { title: 'طب الأطفال', target: '/scientific-departments/8', order: 3, menuTypeId: 'subsub' },
+            { title: 'الأشعة', target: '/scientific-departments/9', order: 5, menuTypeId: 'subsub' }
           ]
         }
       ]
@@ -123,26 +124,21 @@ export class MedicineMenuBarComponent {
     {
       id: '5',
       title: 'المراكز والوحدات',
-      target: '/centers-units',
+      target: '/units-centers',
       order: 5,
       menuTypeId: 'main',
-    type: "columns",
-
+      type: "menu",
       childs: [
-        { title: 'المراكز', target: '/centers', order: 1, menuTypeId: 'sub', childs: [
-            { title: 'Anatomy', target: '/anatomy', order: 1, menuTypeId: 'subsub' },
-            { title: 'Physiology', target: '/physiology', order: 2, menuTypeId: 'subsub' },
-            { title: 'Biochemistry', target: '/biochemistry', order: 3, menuTypeId: 'subsub' },
-            { title: 'Pathology', target: '/pathology', order: 4, menuTypeId: 'subsub' },
-            { title: 'Pharmacology', target: '/pharmacology', order: 5, menuTypeId: 'subsub' }
-          ] },
-        { title: 'الوحدات', target: '/units', order: 2, menuTypeId: 'sub', childs: [
-            { title: 'Anatomy', target: '/anatomy', order: 1, menuTypeId: 'subsub' },
-            { title: 'Physiology', target: '/physiology', order: 2, menuTypeId: 'subsub' },
-            { title: 'Biochemistry', target: '/biochemistry', order: 3, menuTypeId: 'subsub' },
-            { title: 'Pathology', target: '/pathology', order: 4, menuTypeId: 'subsub' },
-            { title: 'Pharmacology', target: '/pharmacology', order: 5, menuTypeId: 'subsub' }
-          ] }
+        { title: 'مركز البحث الطبي', target: '/units-centers/1', order: 1, menuTypeId: 'sub' },
+        { title: 'وحدة التدريب الإكلينيكي', target: '/units-centers/2', order: 2, menuTypeId: 'sub' },
+        { title: 'وحدة الصحة العامة', target: '/units-centers/3', order: 3, menuTypeId: 'sub' },
+        { title: 'مركز التكنولوجيا الحيوية', target: '/units-centers/4', order: 4, menuTypeId: 'sub' },
+        { title: 'وحدة تعليم التمريض', target: '/units-centers/5', order: 5, menuTypeId: 'sub' },
+        { title: 'وحدة ممارسة الصيدلة', target: '/units-centers/6', order: 6, menuTypeId: 'sub' },
+        { title: 'مركز التصوير الطبي', target: '/units-centers/7', order: 7, menuTypeId: 'sub' },
+        { title: 'وحدة معلوماتية صحية', target: '/units-centers/8', order: 8, menuTypeId: 'sub' },
+        { title: 'وحدة الطوارئ', target: '/units-centers/9', order: 9, menuTypeId: 'sub' },
+        { title: 'مركز الصحة النفسية', target: '/units-centers/10', order: 10, menuTypeId: 'sub' }
       ]
     },
     {
@@ -155,16 +151,24 @@ export class MedicineMenuBarComponent {
     },
     {
       id: '7',
-      title: 'أعضاء هيئة التدريس',
+      title: 'أعضاء الهيئة التدريسية',
       target: '/staff-members',
       order: 7,
       menuTypeId: 'main'
-    },
+    }
+    ,
     {
       id: '8',
-      title: 'أخبار',
-      target: '/news',
+      title: 'البروتوكولات',
+      target: '/protocols',
       order: 8,
+      menuTypeId: 'main'
+    },
+    {
+      id: '9',
+      title: 'الأخبار',
+      target: '/news',
+      order: 9,
       menuTypeId: 'main'
     }
   ];

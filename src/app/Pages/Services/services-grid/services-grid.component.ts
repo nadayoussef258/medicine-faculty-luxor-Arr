@@ -21,23 +21,48 @@ export class ServicesGridComponent implements OnInit, OnChanges {
 
   services: ServiceItem[] = [
     // Services Provided to Students
-    { id: 1, type: 'الطلاب', category: 'الخدمات التعليمية',  title: 'المحاضرات', description: 'محاضرات شاملة تغطي جميع المواد الطبية.' },
-    { id: 2, type: 'الطلاب', category: 'الخدمات التعليمية',  title: 'الأقسام', description: 'جلسات أقسام تفاعلية للفهم العميق.' },
-    { id: 3, type: 'الطلاب', category: 'الخدمات التعليمية',  title: 'التدريب السريري', description: 'تدريب سريري عملي في المستشفيات.' },
- 
+    { id: 1, type: 'Students', category: 'Educational Services',  title: 'Lectures', description: 'Comprehensive lectures covering all medical subjects.' },
+    { id: 2, type: 'Students', category: 'Educational Services',  title: 'Sections', description: 'Interactive section sessions for deeper understanding.' },
+    { id: 3, type: 'Students', category: 'Educational Services',  title: 'Clinical Training', description: 'Hands-on clinical training in hospitals.' },
+    { id: 4, type: 'Students', category: 'Educational Services',  title: 'Specialized Labs', description: 'Access to advanced specialized laboratories.' },
+    { id: 5, type: 'Students', category: 'Educational Services',  title: 'Medical Simulation', description: 'Simulation training for medical procedures.' },
+    { id: 6, type: 'Students', category: 'Educational Services',  title: 'Graduation Projects Support', description: 'Guidance and resources for graduation projects.' },
+    { id: 7, type: 'Students', category: 'Research Services',  title: 'Scientific Research Workshops', description: 'Workshops on conducting scientific research.' },
+    { id: 8, type: 'Students', category: 'Research Services',  title: 'Conference Participation', description: 'Support for participating in conferences.' },
+    { id: 9, type: 'Students', category: 'Library Services',  title: 'Central Library', description: 'Access to the central library resources.' },
+    { id: 10, type: 'Students', category: 'Library Services',  title: 'Electronic Resources', description: 'Online electronic resources and databases.' },
+    { id: 11, type: 'Students', category: 'Library Services',  title: 'Medical Databases', description: 'Specialized medical databases access.' },
+    { id: 12, type: 'Students', category: 'Administrative Support', title: 'Student Clinic', description: 'On-campus student clinic services.' },
+    { id: 13, type: 'Students', category: 'Administrative Support',  title: 'Primary Healthcare', description: 'Primary healthcare services for students.' },
+    { id: 14, type: 'Students', category: 'Administrative Support',  title: 'Psychological Support', description: 'Psychological support and counseling.' },
+    { id: 15, type: 'Students', category: 'Student Activities',  title: 'Student Unions', description: 'Support for student union activities.' },
+    { id: 16, type: 'Students', category: 'Student Activities',  title: 'Cultural Trips', description: 'Organized cultural and scientific trips.' },
+    { id: 17, type: 'Students', category: 'Student Activities',  title: 'Competitions', description: 'Participation in academic competitions.' },
+    { id: 18, type: 'Students', category: 'Administrative Support',  title: 'Certificate Issuance', description: 'Issuance of academic certificates.' },
+    { id: 19, type: 'Students', category: 'Administrative Support', title: 'Electronic Registration', description: 'Online registration systems.' },
+    { id: 20, type: 'Students', category: 'Administrative Support', title: 'Transfers', description: 'Assistance with student transfers.' },
+
     // Services Provided to Administrative Staff
-    { id: 21, type: 'إداريين', category: 'الخدمات الإدارية',  title: 'أنظمة الحضور', description: 'أنظمة تتبع الحضور الآلية.' },
-    { id: 22, type: 'إداريين', category: 'الخدمات الإدارية',  title: 'خدمات الموارد البشرية', description: 'خدمات إدارة الموارد البشرية.' },
-    { id: 23, type: 'إداريين', category: 'الخدمات الإدارية',  title: 'الشؤون المالية', description: 'الإدارة والدعم المالي.' },
+    { id: 21, type: 'Administrative Staff', category: 'Administrative Services',  title: 'Attendance Systems', description: 'Automated attendance tracking systems.' },
+    { id: 22, type: 'Administrative Staff', category: 'Administrative Services',  title: 'HR Services', description: 'Human resources management services.' },
+    { id: 23, type: 'Administrative Staff', category: 'Administrative Services',  title: 'Financial Affairs', description: 'Financial administration and support.' },
 
     // Services Provided to Teaching Assistants
-    { id: 28, type: 'هيئة التدريس', category: 'الدعم الأكاديمي',  title: 'التسجيل في برامج الماجستير', description: 'دعم التسجيل في برامج الماجستير.' },
-    { id: 29, type: 'هيئة التدريس', category: 'الدعم الأكاديمي',  title: 'التسجيل في برامج الدكتوراه', description: 'دعم التسجيل في برامج الدكتوراه.' },
-    { id: 30, type: 'هيئة التدريس', category: 'الدعم الأكاديمي',  title: 'الإشراف', description: 'الإشراف الأكاديمي والإرشاد.' },
-    { id: 31, type: 'هيئة التدريس', category: 'فرص التطوير',  title: 'منح البحث', description: 'دعم الحصول على منح البحث.' },
-    { id: 32, type: 'هيئة التدريس', category: 'الموارد المعرفية',  title: 'الوصول إلى المجلات العلمية', description: 'الوصول إلى المجلات العلمية.' },
+    { id: 28, type: 'Teaching Assistants', category: 'Academic Support',  title: 'Master\'s Programs Enrollment', description: 'Enrollment support for Master\'s programs.' },
+    { id: 29, type: 'Teaching Assistants', category: 'Academic Support',  title: 'PhD Programs Enrollment', description: 'Enrollment support for PhD programs.' },
+    { id: 30, type: 'Teaching Assistants', category: 'Academic Support',  title: 'Supervision', description: 'Academic supervision and guidance.' },
+    { id: 31, type: 'Teaching Assistants', category: 'Development Opportunities',  title: 'Research Grants', description: 'Support for obtaining research grants.' },
+    { id: 32, type: 'Teaching Assistants', category: 'Knowledge Resources',  title: 'Scientific Journals Access', description: 'Access to scientific journals.' },
 
-  
+
+    // Services Provided to Faculty Members
+    { id: 39, type: 'Faculty Members', category: 'Academic Services',  title: 'E-learning Platforms', description: 'Access to e-learning platforms.' },
+    { id: 40, type: 'Faculty Members', category: 'Academic Services',  title: 'Course Preparation Support', description: 'Support for course preparation.' },
+    { id: 41, type: 'Faculty Members', category: 'Academic Services',  title: 'Academic Performance Evaluation', description: 'Evaluation of academic performance.' },
+    { id: 42, type: 'Faculty Members', category: 'Research Services',  title: 'Project Funding', description: 'Funding for research projects.' },
+    { id: 43, type: 'Faculty Members', category: 'Research Services',  title: 'Research Teams', description: 'Formation of research teams.' },
+    { id: 44, type: 'Faculty Members', category: 'Research Services',  title: 'International Cooperation', description: 'Support for international cooperation.' },
+
   ];
 
   
@@ -93,4 +118,3 @@ export class ServicesGridComponent implements OnInit, OnChanges {
     }
   }
 }
-

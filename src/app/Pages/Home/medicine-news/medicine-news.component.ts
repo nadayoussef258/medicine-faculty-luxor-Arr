@@ -158,7 +158,7 @@ export class MedicineNewsComponent implements OnInit, OnDestroy {
     const date = new Date(dateString);
     return {
       day: date.getDate().toString().padStart(2, '0'),
-      month: date.toLocaleDateString('en-US', { month: 'short' })
+      month: date.toLocaleDateString('ar', { month: 'short' })
     };
   }
 

@@ -47,6 +47,7 @@ export interface FooterCopyright {
 export class MedicineFooterComponent {
   @Input() contactInfo: FooterContactInfo = {
     logoPath: 'assets/logo.png',
+
     logoAlt: 'شعار كلية الطب',
     description: 'كلية الطب – جامعة الأقصر تصنع أطباء المستقبل بالعلم، والرحمة، والابتكار.',
     address: "الأقصر-  مدينة طيبة الجديدة – بجوار جهاز المدينة ",
@@ -55,6 +56,7 @@ export class MedicineFooterComponent {
   };
 
   @Input() quickLinks: FooterQuickLink[] = [
+
     { text: 'الرئيسية', url: '/', icon: '+' },
     // { text: 'About the College', url: '/about-college', icon: '+' },
     // { text: 'Sectors', url: '/sector', icon: '+' },
@@ -72,14 +74,17 @@ export class MedicineFooterComponent {
       date: '2024-08-13'
     },
     {
-      title: 'تسجيل اتفاقية التعاون مع الجامعة الألمانية',
+            title: 'تسجيل اتفاقية التعاون مع الجامعة الألمانية',
+
       url: '/news/detail/2',
       date: '2024-08-10'
     },
     {
-      title: 'انطلاق برنامج الماجستير في الذكاء الاصطناعي',
+            title: 'انطلاق برنامج الماجستير في الذكاء الاصطناعي',
+
       url: '/news/detail/3',
       date: '2024-08-08'
+ 
     }
   ];
 

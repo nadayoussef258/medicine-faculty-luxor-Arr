@@ -10,29 +10,29 @@ import { CommonModule } from '@angular/common';
 })
 export class GoalsComponent {
   goalsData = {
-  subtitle: 'أهدافنا',
-  title: 'أهداف كلية الطب - جامعة الأقصر',
-  description: 'نسعى لتحقيق مجموعة من الأهداف الاستراتيجية لضمان التميز في التعليم الطبي وخدمات الرعاية الصحية والبحث العلمي.',
+  subtitle: 'Our Goals',
+  title: 'Goals of the Faculty of Medicine - Luxor University',
+  description: 'We strive to achieve a set of strategic goals to ensure excellence in medical education, healthcare services, and scientific research.',
   goals: [
     {
       icon: 'pi pi-graduation-cap',
-      title: 'إعداد الخريجين المؤهلين',
-      description: 'تعليم وتدريب الخريجين الذين يتمتعون بالكفاءة العلمية والمهنية، قادرين على المنافسة في أسواق الرعاية الصحية المحلية والإقليمية والعالمية، مع مهارات نظرية وعملية قوية.'
+      title: 'Preparing Qualified Graduates',
+      description: 'Educating and training graduates who are scientifically and professionally competent, capable of competing in the local, regional, and global healthcare markets, with strong theoretical and practical skills.'
     },
     {
       icon: 'pi pi-search',
-      title: 'تعزيز البحث العلمي',
-      description: 'تقدم البحث الطبي والابتكار من خلال دعم المشاريع البحثية المتميزة، وتعزيز الاكتشافات الطبية، وتعزيز التعاون البحثي الدولي.'
+      title: 'Promoting Scientific Research',
+      description: 'Advancing medical research and innovation by supporting outstanding research projects, fostering medical discoveries, and enhancing international research collaboration.'
     },
     {
       icon: 'pi pi-globe',
-      title: 'المجتمع والتنمية المستدامة',
-      description: 'المساهمة في الرعاية الصحية المستدامة وتنمية المجتمع من خلال مواجهة تحديات الصحة العامة، وتقديم الحلول الطبية، وتعزيز الشراكات مع قطاع الرعاية الصحية.'
+      title: 'Community & Sustainable Development',
+      description: 'Contributing to sustainable healthcare and community development by addressing public health challenges, providing medical solutions, and strengthening partnerships with the healthcare sector.'
     },
     {
       icon: 'pi pi-star',
-      title: 'التميز الأكاديمي والسريري',
-      description: 'تحقيق التميز في البرامج الأكاديمية والسريرية من خلال تطوير المناهج المستمر، واعتماد طرق التدريس الحديثة، وضمان التعليم الطبي عالي الجودة.'
+      title: 'Academic & Clinical Excellence',
+      description: 'Achieving excellence in academic and clinical programs through continuous curriculum development, adopting modern teaching methods, and ensuring high-quality medical education.'
     }
   ]
 };

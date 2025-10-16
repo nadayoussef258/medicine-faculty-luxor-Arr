@@ -26,47 +26,47 @@ export class DepartmentsComponent {
   @Input() departments: DepartmentItem[] = [
     {
       id: '1',
-      title: 'CARDIOLOGY',
-      description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas adipisicing.',
+      title: 'قسم أمراض القلب',
+      description: 'القسم المتخصص في تشخيص وعلاج أمراض القلب والأوعية الدموية وتقديم الخدمات التعليمية والبحثية.',
       iconPath: 'assets/cardiology.png',
       iconAlt: 'Cardiology Icon'
     },
     {
       id: '2',
-      title: 'NEUROLOGY',
-      description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas adipisicing.',
+      title: 'قسم المخ والأعصاب',
+      description: 'القسم المعني بتشخيص وعلاج الأمراض العصبية وإجراء البحوث المتعلقة بالجهاز العصبي.',
             iconPath: 'assets/Neurology.png',
 
       iconAlt: 'Neurology Icon'
     },
     {
       id: '3',
-      title: 'ORTHOPEDICS',
-      description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas adipisicing.',
+      title: 'قسم جراحة العظام',
+      description: 'قسم يهتم بتشخيص وعلاج الإصابات والأمراض المتعلقة بالجهاز العظمي والمفاصل.',
             iconPath: 'assets/Orthopedics.png',
 
       iconAlt: 'Orthopedics Icon'
     },
     {
       id: '4',
-      title: 'CANCER DEPARTMENT',
-      description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas adipisicing.',
+      title: 'قسم الأورام',
+      description: 'القسم المتخصص في تقديم خدمات تشخيص وعلاج مرضى السرطان بالإضافة إلى البرامج البحثية والتعليمية.',
             iconPath: 'assets/cancer department.png',
 
       iconAlt: 'Cancer Department Icon'
     },
     {
       id: '5',
-      title: 'OPHTHALMOLOGY',
-      description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas adipisicing.',
+      title: 'قسم العيون',
+      description: 'القسم المعني بتشخيص وعلاج اضطرابات العيون وإجراء العمليات الجراحية المتخصصة.',
             iconPath: 'assets/Ophthalmology.png',
 
       iconAlt: 'Ophthalmology Icon'
     },
     {
       id: '6',
-      title: 'RESPIRATORY',
-      description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas adipisicing.',
+      title: 'قسم الجهاز التنفسي',
+      description: 'القسم المتخصص في تشخيص وعلاج أمراض الجهاز التنفسي وتقديم الرعاية والخدمات السريرية.',
             iconPath: 'assets/Respiratory.png',
 
       iconAlt: 'Respiratory Icon'

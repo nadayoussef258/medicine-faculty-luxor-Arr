@@ -30,7 +30,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--spacing-md);
   position: relative;
@@ -89,7 +89,7 @@
   position: relative;
   background: var(--medicine-white);
   border-radius: var(--border-radius-lg);
-  padding: 2rem 1.8rem;
+  padding: 2.5rem 1.8rem;
   text-align: center;
   border: 2px solid var(--medicine-medium-gray);
   box-shadow: var(--shadow-md);

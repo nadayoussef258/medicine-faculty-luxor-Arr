@@ -32,58 +32,57 @@ export class SectorNewsComponent {
 
   loadNews(): void {
     this.news = [
-  {
-    id: 1,
-    title: 'أخبار هامة عن القطاع',
-    summary: 'هذا ملخص للأخبار الهامة المتعلقة بالقطاع.',
-    image: 'assets/event1.jpg',
-    date: '2024-06-01',
-    category: 'أخبار عامة',
-    readTime: '٥ دقائق',
-    author: 'إدارة الجامعة'
-  },
-  {
-    id: 2,
-    title: 'تحديث جديد في القطاع',
-    summary: 'ملخص للتحديث الأخير الذي جرى في القطاع.',
-    image: 'assets/event2.jpg',
-    date: '2024-05-20',
-    category: 'تحديثات',
-    readTime: '٣ دقائق',
-    author: 'إدارة الجامعة'
-  },
-  {
-    id: 3,
-    title: 'القطاع يحقق إنجازاً جديداً',
-    summary: 'حقق القطاع إنجازاً جديداً في مشاريعه المستمرة.',
-    image: 'assets/event3.jpg',
-    date: '2024-04-15',
-    category: 'إنجازات',
-    readTime: '٤ دقائق',
-    author: 'فريق إعلام القطاع'
-  },
-  {
-    id: 4,
-    title: 'إعلان عن مؤتمر قادم',
-    summary: 'سيُعقد مؤتمر قريباً لمناقشة تطورات القطاع.',
-    image: 'assets/slider1.jpeg',
-    date: '2024-03-10',
-    category: 'فعاليات',
-    readTime: 'دقيقتان',
-    author: 'لجنة المؤتمر'
-  },
-  {
-    id: 5,
-    title: 'القطاع يتلقى تكريماً',
-    summary: 'حصل القطاع على تكريم لأدائه المتميز.',
-    image: 'assets/slider2.jpg',
-    date: '2024-02-28',
-    category: 'جوائز',
-    readTime: '٣ دقائق',
-    author: 'إدارة الجامعة'
-  }
-];
-
+      {
+        id: 1,
+        title: 'Important News About the Sector',
+        summary: 'This is a summary of the important news related to the sector.',
+        image: 'assets/event1.jpg',
+        date: '2024-06-01',
+        category: 'General News',
+        readTime: '5 min',
+        author: 'University Administration'
+      },
+      {
+        id: 2,
+        title: 'New Update in the Sector',
+        summary: 'A summary of the recent update that took place in the sector.',
+        image: 'assets/event2.jpg',
+        date: '2024-05-20',
+        category: 'Updates',
+        readTime: '3 min',
+        author: 'University Administration'
+      },
+      {
+        id: 3,
+        title: 'Sector Achieves New Milestone',
+        summary: 'The sector has achieved a new milestone in its ongoing projects.',
+        image: 'assets/event3.jpg',
+        date: '2024-04-15',
+        category: 'Achievements',
+        readTime: '4 min',
+        author: 'Sector Media Team'
+      },
+      {
+        id: 4,
+        title: 'Upcoming Conference Announcement',
+        summary: 'An upcoming conference will be held to discuss sector developments.',
+        image: 'assets/slider1.jpeg',
+        date: '2024-03-10',
+        category: 'Events',
+        readTime: '2 min',
+        author: 'Conference Committee'
+      },
+      {
+        id: 5,
+        title: 'Sector Receives Recognition',
+        summary: 'The sector received recognition for its outstanding performance.',
+        image: 'assets/slider2.jpg',
+        date: '2024-02-28',
+        category: 'Awards',
+        readTime: '3 min',
+        author: 'University Administration'
+      }
+    ];
   }
 
   onSearch(filters: any): void {

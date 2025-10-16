@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { SectorImageComponent } from './sector-Image.component';
+import { SectorHeaderComponent } from './sector-header.component';
 
-describe('SectorImageComponent', () => {
-  let component: SectorImageComponent;
-  let fixture: ComponentFixture<SectorImageComponent>;
+describe('SectorHeaderComponent', () => {
+  let component: SectorHeaderComponent;
+  let fixture: ComponentFixture<SectorHeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SectorImageComponent ]
+      declarations: [ SectorHeaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SectorImageComponent);
+    fixture = TestBed.createComponent(SectorHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -64,6 +64,7 @@
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  direction: rtl;
 }
 
 /* ===============================
@@ -125,7 +126,6 @@
   position: relative;
   background: var(--services-card-bg);
   transition: all 0.3s ease;
-  cursor: pointer;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -192,23 +192,35 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 20px;
+  padding: 0 50px;
   transition: all 0.3s ease;
 }
-
-
 .card-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+    font-size: 16px;
+  line-height: 1.4;
   font-weight: 600;
   color: var(--medicine-white);
+  
+}
+  
+
+.service-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--medicine-primary-brown-light);
   margin: 0;
   line-height: 1.3;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   text-align: left;
 }
-
+.type-text{
+    font-size: 16px;
+  line-height: 1.6;
+  font-weight: 600;
+  color: var(--medicine-light-beige);
+}
 /* ===============================
    📝 Card Content - Simplified
    =============================== */
@@ -231,25 +243,6 @@
   text-align: center;
 }
 
-.readmore-link {
-  display: inline-block;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--medicine-primary-red-dark);
-  text-decoration: none;
-  margin-top: 15px;
-  padding: 0;
-  transition: all 0.3s ease;
-  border: none;
-  background: transparent;
-  text-align: center;
-}
-
-.readmore-link:hover {
-  color: var(--medicine-primary-red-dark);
-  text-decoration: none;
-}
 
 /* ===============================
    🔗 All Services Button
@@ -478,4 +471,31 @@
    =============================== */
 [dir="rtl"] .card-content {
   text-align: center;
+}
+
+/* RTL overrides for Arabic */
+[dir="rtl"] .services-section {
+  direction: rtl;
+}
+
+[dir="rtl"] .card-header-split {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .card-icon-section {
+  order: 2;
+}
+
+[dir="rtl"] .card-title-section {
+  justify-content: flex-end;
+  padding: 0 40px;
+  text-align: right;
+}
+
+[dir="rtl"] .card-content {
+  text-align: right;
+}
+
+[dir="rtl"] .service-title, [dir="rtl"] .card-description {
+  text-align: right;
 }

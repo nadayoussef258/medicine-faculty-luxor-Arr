@@ -7,13 +7,13 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   template: `
     <div class="academic-departments-container">
-      <h2>Academic Departments</h2>
+      <h2>الأقسام الأكاديمية</h2>
       <ul>
-        <li><a routerLink="/departments/academic/anatomy">Anatomy</a></li>
-        <li><a routerLink="/departments/academic/physiology">Physiology</a></li>
-        <li><a routerLink="/departments/academic/biochemistry">Biochemistry</a></li>
-        <li><a routerLink="/departments/academic/pathology">Pathology</a></li>
-        <li><a routerLink="/departments/academic/pharmacology">Pharmacology</a></li>
+        <li><a routerLink="/departments/academic/anatomy">القسم: علم التشريح</a></li>
+        <li><a routerLink="/departments/academic/physiology">القسم: علم وظائف الأعضاء</a></li>
+        <li><a routerLink="/departments/academic/biochemistry">القسم: الكيمياء الحيوية</a></li>
+        <li><a routerLink="/departments/academic/pathology">القسم: علم الأمراض</a></li>
+        <li><a routerLink="/departments/academic/pharmacology">القسم: علم الأدوية</a></li>
       </ul>
       <router-outlet></router-outlet>
     </div>

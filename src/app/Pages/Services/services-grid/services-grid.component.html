@@ -22,8 +22,8 @@
   </div>
 
   <div class="news-pagination" *ngIf="totalPages > 1">
-      <button class="news-pagination-btn nav-btn" [disabled]="page === 1" (click)="setPage(page-1)">السابق</button>
+      <button class="news-pagination-btn nav-btn" [disabled]="page === 1" (click)="setPage(page-1)">Previous</button>
       <button class="news-pagination-btn" *ngFor="let p of [].constructor(totalPages); let i = index" [class.active]="page === (i+1)" (click)="setPage(i+1)">{{ i+1 }}</button>
-      <button class="news-pagination-btn nav-btn" [disabled]="page === totalPages" (click)="setPage(page+1)">التالي</button>
+      <button class="news-pagination-btn nav-btn" [disabled]="page === totalPages" (click)="setPage(page+1)">Next</button>
     </div>
 </div>

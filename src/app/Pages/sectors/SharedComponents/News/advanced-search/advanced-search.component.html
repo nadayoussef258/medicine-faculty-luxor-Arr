@@ -5,12 +5,12 @@
     <div class="search-form">
       <div class="search-row">
         <div class="search-field">
-          <label for="title">عنوان الخبر</label>
+          <label for="title">News Title</label>
           <input
             type="text"
             id="title"
             [(ngModel)]="searchData.title"
-            placeholder="اكتب عنوان الخبر هنا..."
+            placeholder="Type news title..."
             class="search-input"
           />
         </div>
@@ -20,13 +20,13 @@
 
       <div class="search-row">
         <div class="search-field">
-          <label for="year">السنة</label>
+          <label for="year">Year</label>
           <select
             id="year"
             [(ngModel)]="searchData.year"
             class="search-select"
           >
-            <option value="">كل السنين</option>
+            <option value="">All Years</option>
             <option *ngFor="let year of years" [value]="year">
               {{ year }}
             </option>
@@ -34,13 +34,13 @@
         </div>
 
         <div class="search-field">
-          <label for="month">شهر</label>
+          <label for="month">Month</label>
           <select
             id="month"
             [(ngModel)]="searchData.month"
             class="search-select"
           >
-            <option value="">كل الشهور</option>
+            <option value="">All Months</option>
             <option *ngFor="let month of months" [value]="month.value">
               {{ month.label }}
             </option>
@@ -51,11 +51,11 @@
       <div class="search-actions">
         <button class="search-btn" (click)="performSearch()">
           <i class="pi pi-search"></i>
-          بحث
+          Search
         </button>
         <button class="clear-btn" (click)="clearSearch()">
           <i class="pi pi-refresh"></i>
-          مسح البحث
+          Clear Search
         </button>
       </div>
     </div>

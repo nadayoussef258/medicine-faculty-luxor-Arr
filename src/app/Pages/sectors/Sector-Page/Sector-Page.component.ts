@@ -43,10 +43,10 @@ export class SectorPageComponent implements OnInit {
 
     // Mock tabs data
     this.tabs = [
-      { title: 'حول القطاع', link: 'about-sector' },
-      { title: 'الأقسام', link: 'sector-departments' },
-      { title: 'الخدمات', link: 'sector-services' },
-      { title: 'الأخبار', link: 'sector-news' }
+      { title: 'About Sector', link: 'about-sector' },
+      { title: 'Department', link: 'sector-departments' },
+      { title: 'Services', link: 'sector-services' },
+      { title: 'News', link: 'sector-news' }
     ];
     this.currentRoute = 'about-sector'; // default to about-sector
   }
